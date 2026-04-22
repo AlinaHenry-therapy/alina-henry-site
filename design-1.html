@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Алина Генри — интегральный психотерапевт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --rose:       #C08080;
+  --rose-light: #E8C4C0;
+  --rose-pale:  #F5EDED;
+  --rose-deep:  #8B5050;
+  --blue:       #5A8FBF;
+  --blue-light: #A0C4E0;
+  --blue-pale:  #E4F0F8;
+  --blue-deep:  #2A5F8A;
+  --cream:      #FAF7F4;
+  --text:       #1A1010;
+  --text-mid:   #3D2E2C;
+  --text-muted: #6A5A58;
+  --white:      #FFFFFF;
+  --border-r:   rgba(192,128,128,0.2);
+  --border-b:   rgba(90,143,191,0.2);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Serif Display', serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(250,247,244,0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-r);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 500; letter-spacing: 0.03em;
+  color: var(--text); text-decoration: none;
+}
+.nav-logo span { color: var(--rose); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+  color: var(--text-mid); text-decoration: none; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--rose); }
+.nav-cta {
+  background: var(--rose); color: var(--white) !important;
+  padding: 10px 24px; letter-spacing: 0.08em;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--rose-deep) !important; color: var(--white) !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 72px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 60px 80px 60px;
+  background: var(--cream);
+  position: relative;
+}
+.hero-left::after {
+  content: '';
+  position: absolute; right: 0; top: 10%; bottom: 10%;
+  width: 1px; background: var(--border-r);
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--rose); font-weight: 600; margin-bottom: 32px;
+}
+.hero-tag::before {
+  content: ''; width: 28px; height: 1px; background: var(--rose);
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(41px, 4.5vw, 67px);
+  font-weight: 400; line-height: 1.08;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+.hero-title em {
+  font-style: normal; color: var(--blue);
+  display: block;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 500; letter-spacing: 0.08em;
+  color: var(--text); margin-bottom: 8px;
+  font-style: normal; text-transform: uppercase;
+}
+.hero-role {
+  font-size: 21px; font-weight: 300; color: var(--text-muted);
+  margin-bottom: 48px; letter-spacing: 0.04em;
+}
+.hero-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-primary {
+  padding: 12px 28px;
+  background: var(--rose);
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 11px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--rose);
+  border-radius: 999px;
+  transition: background 0.25s, transform 0.15s, border-color 0.25s;
+  display: inline-block; text-align: center;
+}
+.btn-primary:hover { background: var(--rose-deep); border-color: var(--rose-deep); transform: translateY(-2px); }
+.btn-secondary {
+  padding: 12px 28px;
+  background: rgba(160, 196, 224, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--blue-deep);
+  font-family: 'DM Serif Display', serif;
+  font-size: 11px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid rgba(90, 143, 191, 0.5);
+  border-radius: 999px;
+  transition: all 0.25s; display: inline-block; text-align: center;
+}
+.btn-secondary:hover { background: rgba(160, 196, 224, 0.6); border-color: var(--blue-deep); color: var(--blue-deep); }
+
+.hero-right {
+  position: relative;
+  background: var(--rose-pale);
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 24px 24px 24px 0;
+}
+.hero-photo-wrap {
+  position: relative;
+  width: 100%; height: 100%;
+}
+.hero-photo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+}
+.hero-badge {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(192,128,128,0.92);
+  backdrop-filter: blur(8px);
+  padding: 10px 14px;
+  display: flex; gap: 6px; align-items: center;
+}
+.badge-item { text-align: center; flex: 1; min-width: 0; }
+.badge-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px; font-weight: 400; color: var(--white);
+  display: block; line-height: 1;
+  letter-spacing: -0.01em;
+}
+.badge-label {
+  font-size: 10.5px; color: rgba(255,255,255,0.85);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  display: block; margin-top: 2px; line-height: 1.15;
+}
+.badge-item:last-child .badge-label { font-size: 9.5px; letter-spacing: 0.03em; }
+
+/* ── SECTION BASE ── */
+.section { padding: 100px 60px; }
+.s-tag, .about-text .s-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 400; margin-bottom: 18px; line-height: 1.4;
+}
+.s-tag.rose { color: var(--rose); }
+.s-tag.rose::before { content: ''; width: 24px; height: 1px; background: var(--rose); }
+.s-tag.blue { color: var(--blue-deep); }
+.s-tag.blue::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
+.s-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(31px, 3.5vw, 51px);
+  font-weight: 400; line-height: 1.12; margin-bottom: 52px;
+}
+
+/* ── REQUESTS ── */
+.requests { background: var(--blue-pale); }
+.requests .s-title { margin-bottom: 0; }
+.requests-intro {
+  font-size: 17px; font-weight: 300; color: var(--text-mid);
+  max-width: 520px; margin-top: 18px; margin-bottom: 52px; line-height: 1.8;
+}
+.requests-outro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 400;
+  color: var(--blue-deep); line-height: 1.55;
+  max-width: 680px; margin: 48px auto 0; text-align: center;
+}
+.req-grid {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 14px;
+}
+.req-card {
+  background: var(--white);
+  padding: 32px 28px;
+  border-radius: 18px;
+  transition: transform 0.2s, box-shadow 0.25s;
+  cursor: default;
+  text-align: center;
+}
+.req-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(192,128,128,0.14); }
+.req-card:nth-child(even):hover { box-shadow: 0 8px 24px rgba(90,143,191,0.14); }
+.req-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px; font-weight: 400; line-height: 1.2;
+  margin-bottom: 12px; color: var(--text);
+}
+.req-desc { font-size: 15px; font-weight: 400; color: var(--text-mid); line-height: 1.7; }
+
+/* ── ABOUT ── */
+.about { background: var(--cream); }
+.about-wrap {
+  display: grid; grid-template-columns: 480px 1fr; gap: 80px; align-items: start;
+}
+.about-photo-wrap { position: relative; }
+.about-photo-wrap img {
+  width: 100%; aspect-ratio: 4/5;
+  object-fit: cover; object-position: center top;
+  display: block;
+  border-radius: 18px;
+}
+.about-quote-box {
+  position: absolute; bottom: -32px; right: -32px;
+  background: rgba(160, 196, 224, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--blue-deep);
+  padding: 30px 34px;
+  max-width: 280px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-style: italic; line-height: 1.65;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.about-text { padding-top: 8px; }
+.about-text p {
+  font-size: 16px; font-weight: 400; color: var(--text-mid);
+  line-height: 1.85; margin-bottom: 20px;
+}
+.about-text p strong { color: var(--text); font-weight: 600; }
+.creds-list { margin-top: 36px; display: flex; flex-direction: column; gap: 0; }
+.cred {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid var(--border-r);
+  font-size: 14px; font-weight: 500; color: var(--text-mid);
+}
+.cred-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 6px;
+}
+.cred-dot.r { background: var(--rose); }
+.cred-dot.b { background: var(--blue); }
+
+/* ── APPROACH ── */
+.approach { background: var(--rose-pale); }
+.approach .s-title { margin-bottom: 0; }
+.approach-intro {
+  font-size: 17px; font-weight: 300; color: var(--text-mid);
+  max-width: 640px; margin: 28px 0 52px; line-height: 1.8;
+}
+.approach-intro.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 24px 28px;
+  border: 1.5px dashed var(--rose-light);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.5);
+}
+.approach-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 14px;
+}
+.ap-card {
+  background: var(--white);
+  padding: 36px 28px;
+  transition: background 0.25s, transform 0.2s;
+  border-radius: 18px;
+}
+.ap-card:hover { background: var(--rose-pale); transform: translateY(-3px); }
+.ap-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 49px; font-weight: 400; color: var(--rose-light);
+  display: block; margin-bottom: 20px; line-height: 1;
+  letter-spacing: 0.01em;
+}
+.ap-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 31px; font-weight: 400; line-height: 1.15;
+  margin-bottom: 14px; color: var(--text);
+}
+.ap-desc { font-size: 15px; font-weight: 400; color: var(--text-mid); line-height: 1.75; }
+
+/* ── SERVICES ── */
+.services { background: var(--cream); }
+.services .s-tag { margin-bottom: 40px; }
+.svc-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.svc-item {
+  display: flex; flex-direction: column;
+  padding: 34px 30px;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--border-r);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  cursor: default;
+}
+.svc-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(192,128,128,0.12);
+  border-color: rgba(192,128,128,0.35);
+}
+.svc-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px; font-weight: 600; margin-bottom: 12px;
+  line-height: 1.15; text-align: center;
+}
+.svc-desc {
+  font-size: 15px; font-weight: 400; color: var(--text-mid);
+  line-height: 1.7; margin-bottom: 16px;
+  text-align: justify;
+  text-align-last: center;
+  word-spacing: -0.08em;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; justify-content: center; }
+.svc-tag {
+  font-size: 12px; padding: 4px 14px; letter-spacing: 0.04em;
+  border: 1px solid var(--rose-light); color: var(--rose-deep);
+  font-weight: 500;
+}
+.svc-tag.b {
+  border-color: var(--blue-light); color: var(--blue-deep);
+}
+.svc-steps { margin-top: 0; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+.svc-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.5;
+  text-align: justify;
+  word-spacing: -0.08em;
+  align-items: start;
+}
+.svc-step-n { color: var(--rose); font-weight: 600; flex-shrink: 0; }
+.svc-body { flex: 1; }
+.svc-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+  padding-top: 20px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-r);
+}
+.svc-price { text-align: left; }
+.btn-svc {
+  display: inline-block;
+  padding: 12px 22px;
+  background: rgba(160, 196, 224, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--blue-deep);
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid rgba(90, 143, 191, 0.5);
+  border-radius: 12px;
+  transition: all 0.25s; white-space: nowrap;
+  flex-shrink: 0;
+}
+.btn-svc:hover {
+  background: rgba(160, 196, 224, 0.6);
+  border-color: var(--blue-deep);
+  color: var(--blue-deep);
+  transform: translateY(-2px);
+}
+.price-main {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px; font-weight: 400;
+  color: var(--text); display: block; line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.price-note { font-size: 13px; color: var(--text-muted); font-weight: 400; display: block; margin-top: 4px; }
+
+/* ── HOW ── */
+.how { background: var(--blue-pale); }
+.how-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 3px;
+}
+.how-card {
+  background: var(--white);
+  padding: 44px 36px;
+  position: relative; overflow: hidden;
+}
+.how-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--blue-light);
+  transition: background 0.25s;
+}
+.how-card:hover::before { background: var(--rose); }
+.how-big-n {
+  font-family: 'DM Serif Display', serif;
+  font-size: 89px; font-weight: 400;
+  color: var(--blue-light); line-height: 1;
+  display: block; margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.how-title { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+.how-desc { font-size: 15px; font-weight: 400; color: var(--text-mid); line-height: 1.75; }
+
+/* ── METHOD ── */
+.method { background: var(--cream); }
+.method-wrap {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.method-card {
+  width: 100%;
+  padding: 34px 32px;
+  text-align: center;
+}
+.method-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px; font-weight: 400;
+  margin-bottom: 12px; line-height: 1.2;
+}
+.method-card p {
+  font-size: 15px; line-height: 1.65; font-weight: 400;
+}
+.method-card-first {
+  background: var(--blue-pale);
+  color: var(--text);
+  border-radius: 18px 18px 0 0;
+  padding-top: 36px;
+}
+.method-card-first .method-icon-wrap {
+  display: flex; justify-content: center; margin-bottom: 18px;
+}
+.method-card-first .method-icon-wrap svg {
+  width: 54px; height: 54px; stroke: var(--blue-deep);
+}
+.method-card-first h3 { color: var(--blue-deep); }
+.method-card-first p { color: var(--text-mid); }
+.method-card-light {
+  background: var(--rose-pale);
+  color: var(--text);
+}
+.method-card-light h3 { color: var(--rose-deep); }
+.method-card-light p { color: var(--text-mid); }
+.method-card-dark {
+  background: var(--cream);
+  color: var(--text);
+  border: 1.5px solid var(--border-r);
+  border-radius: 0 0 18px 18px;
+}
+.method-card-dark h3 { color: var(--rose-deep); }
+.method-card-dark p { color: var(--text-mid); }
+@media (max-width: 560px) {
+  .method-card { padding: 28px 24px; }
+  .method-card-first { padding-top: 32px; }
+  .method-card h3 { font-size: 24px; }
+  .method-card p { font-size: 14px; }
+  .method-card-first .method-icon-wrap svg { width: 44px; height: 44px; }
+}
+
+/* ── CONTACT ── */
+.contact { background: rgba(139, 80, 80, 0.82); color: var(--white); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+}
+.contact .s-tag { color: var(--rose-light); }
+.contact .s-tag::before { background: var(--rose-light); }
+.contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(33px, 3.5vw, 53px);
+  font-weight: 400; line-height: 1.15; margin-bottom: 20px;
+  color: var(--white);
+}
+.contact-sub {
+  font-size: 16px; font-weight: 300;
+  color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 44px;
+}
+.contact-links { display: flex; flex-direction: column; gap: 0; }
+.c-link {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none; color: rgba(255,255,255,0.85);
+  font-size: 15px; font-weight: 400;
+  transition: color 0.2s, padding-left 0.2s;
+}
+.c-link:hover { color: var(--white); padding-left: 8px; }
+.c-link-ico {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; flex-shrink: 0;
+  font-family: serif;
+}
+.contact-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  padding: 48px 40px;
+}
+.contact-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px; font-weight: 400; color: var(--white);
+  margin-bottom: 16px; line-height: 1.3;
+}
+.contact-box p {
+  font-size: 15px; font-weight: 300;
+  color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 32px;
+}
+.btn-white {
+  display: inline-block;
+  padding: 15px 36px;
+  background: var(--white);
+  color: var(--rose-deep);
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-white:hover { background: var(--rose-pale); transform: translateY(-2px); }
+
+/* ── BOOKING MODAL ── */
+.booking-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  display: none; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.booking-modal.open { display: flex; }
+.booking-overlay {
+  position: absolute; inset: 0;
+  background: rgba(26, 16, 16, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: bookingFade 0.25s ease;
+}
+.booking-dialog {
+  position: relative; z-index: 1;
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 44px 40px 36px;
+  width: 100%; max-width: 520px;
+  max-height: 90vh; overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(26,16,16,0.25);
+  animation: bookingSlide 0.3s ease;
+}
+@keyframes bookingFade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes bookingSlide { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+.booking-close {
+  position: absolute; top: 14px; right: 14px;
+  background: transparent; border: none;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: 27px; line-height: 1; cursor: pointer;
+  color: var(--text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+.booking-close:hover { background: var(--rose-pale); color: var(--rose-deep); }
+.booking-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 33px; font-weight: 400; color: var(--text);
+  margin: 6px 0 10px; line-height: 1.2;
+}
+.booking-sub {
+  font-size: 15px; color: var(--text-mid);
+  line-height: 1.6; margin-bottom: 26px;
+}
+.booking-form { display: flex; flex-direction: column; gap: 16px; }
+.booking-label { display: flex; flex-direction: column; gap: 6px; }
+.booking-label > span {
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-mid); font-weight: 600;
+}
+.booking-label input,
+.booking-label textarea {
+  font-family: 'Raleway', sans-serif; font-size: 16px; color: var(--text);
+  padding: 13px 16px;
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+  width: 100%;
+}
+.booking-label input:focus,
+.booking-label textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(192, 128, 128, 0.12);
+}
+.booking-label textarea { min-height: 76px; font-family: 'Raleway', sans-serif; line-height: 1.5; }
+.booking-submit { margin-top: 10px; width: 100%; cursor: pointer; }
+.booking-success {
+  display: none;
+  text-align: center;
+  padding: 20px 0 8px;
+}
+.booking-modal.success .booking-form,
+.booking-modal.success .booking-title,
+.booking-modal.success .booking-sub { display: none; }
+.booking-modal.success .booking-success { display: block; }
+.booking-success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--rose-pale); color: var(--rose-deep);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 29px; margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.booking-success h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px; font-weight: 400; color: var(--text);
+  margin-bottom: 12px;
+}
+.booking-success p {
+  font-size: 15px; color: var(--text-mid);
+  line-height: 1.6; margin-bottom: 18px;
+}
+.booking-success a {
+  display: inline-block;
+  font-size: 14px; color: var(--rose-deep);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+@media (max-width: 560px) {
+  .booking-dialog { padding: 36px 22px 26px; border-radius: 16px; }
+  .booking-title { font-size: 27px; }
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #1A1010;
+  padding: 28px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  color: rgba(255,255,255,0.3); font-size: 13px; font-weight: 300;
+}
+footer a { color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: rgba(255,255,255,0.7); }
+
+/* ── MOBILE ── */
+@media (max-width: 960px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .section { padding: 64px 24px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 100px 24px 48px; }
+  .hero-right { height: 420px; padding: 24px 24px 36px; overflow: visible; }
+  .hero-photo-wrap img { border-radius: 20px; }
+  .hero-badge { bottom: -12px; border-radius: 14px; }
+  .hero-btns { grid-template-columns: 1fr; }
+  .btn-primary, .btn-secondary { padding: 16px 28px; }
+  .hero-badge { padding: 12px 10px; gap: 10px; }
+  .badge-num { font-size: 21px; }
+  .badge-label { font-size: 9.5px; letter-spacing: 0.05em; margin-top: 3px; }
+  .ap-num { display: none; }
+  .ap-card {
+    padding: 14px 16px;
+    text-align: center;
+    position: relative;
+  }
+  .ap-card:nth-child(even) { background: var(--blue-pale); }
+  .ap-card:nth-child(even):hover { background: var(--blue-pale); }
+  .ap-title { font-size: 17px; margin-bottom: 6px; }
+  .ap-desc { font-size: 13px; line-height: 1.5; }
+  .approach-grid { position: relative; }
+  .ap-card + .ap-card::before {
+    content: '↕';
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--rose);
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1;
+    opacity: 0.6;
+  }
+  .about-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .about-quote-box { position: static; margin-top: 16px; max-width: 100%; }
+  .req-grid { grid-template-columns: 1fr; }
+  .approach-grid { grid-template-columns: 1fr; gap: 28px; }
+  .ap-card:hover { background: var(--white); transform: none; }
+  .about-quote-box {
+    position: relative;
+    margin: -58px 24px 0;
+    max-width: none;
+    padding: 22px 20px;
+    font-size: 18px;
+    line-height: 1.55;
+    text-align: center;
+    background: rgba(160, 196, 224, 0.28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.35);
+    z-index: 2;
+  }
+  .how-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px 24px; }
+  .svc-list { grid-template-columns: 1fr; gap: 16px; }
+  .svc-item { padding: 28px 24px; }
+  .svc-name { font-size: 23px; }
+  .price-main { font-size: 27px; }
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Алина <span>Генри</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#contact">Контакты</a></li>
+    <li><a href="#" class="nav-cta" onclick="openBookingModal(); return false;">Записаться</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Интегральный психотерапевт · Онлайн</p>
+    <h1 class="hero-title">
+      Помогаю стать<br>
+      <em>живым и свободным</em>
+    </h1>
+    <p class="hero-name">Алина Генри</p>
+    <p class="hero-role">Процессуальный терапевт, работающий в интегральном подходе</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary" onclick="openBookingModal(); return false;">Записаться на консультацию</a>
+      <a href="#services" class="btn-secondary">Узнать об услугах</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="alina-hero-blurred.jpg" alt="Алина Генри — интегральный психотерапевт">
+      <div class="hero-badge">
+        <div class="badge-item">
+          <span class="badge-num">9</span>
+          <span class="badge-label">лет практики</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-num">400+</span>
+          <span class="badge-label">клиентов</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-num">1000+</span>
+          <span class="badge-label">часов личной терапии и супервизии</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUESTS -->
+<section class="requests section fade-up" id="requests">
+  <p class="s-tag blue">С чем ко мне приходят</p>
+  <div class="req-grid">
+    <div class="req-card">
+      <p class="req-title">Тревога и стресс</p>
+      <p class="req-desc">Внутри постоянный фон напряжения — и непонятно откуда он. Сложно расслабиться даже когда всё вроде бы в порядке.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Выгорание</p>
+      <p class="req-desc">Нет сил, нет интереса, нет себя. Снаружи всё нормально — но внутри пустота и ощущение что ты функция, а не человек.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Кризис смыслов</p>
+      <p class="req-desc">Всё есть — работа, отношения, стабильность. Но ощущение «не так» или «и что дальше» никуда не уходит.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Отношения</p>
+      <p class="req-desc">В паре или с собой — один и тот же повторяющийся круг. Непонимание, дистанция, невозможность договориться.</p>
+    </div>
+  </div>
+  <p class="requests-outro">* Если ты не нашёл свой запрос или не знаешь, как его сформулировать — всё равно напиши, и я помогу тебе с этим разобраться.</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about section fade-up" id="about">
+  <div class="about-wrap">
+    <div class="about-photo-wrap">
+      <img src="alina-about.jpg" alt="Алина Генри">
+      <div class="about-quote-box">
+        «Весь мир становится полем для исследования, когда начинаешь понимать язык этой музыки.»
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="s-tag rose">Обо мне</p>
+      <h2 class="s-title" style="margin-bottom:28px;">Алина Генри</h2>
+      <p>Я пришла в психологию не из теории — из собственного опыта. Психотерапия изменила мою жизнь так кардинально, что <strong>«до» и «после» — это два совершенно разных человека.</strong></p>
+      <p>Я — процессуальный терапевт, работающий в интегральном подходе. <strong>Интегральный подход</strong> — значит я смотрю на тебя целиком: тело, психика, отношения, смыслы, контекст жизни. Не ищу одну причину. Ищу всю картину.</p>
+      <p>Когда клиент говорит «у меня получилось стать свободнее» — это мой праздник. Я люблю свою работу и она не ограничивает меня только сессиями. Весь мир становится полем для исследования.</p>
+      <div class="creds-list">
+        <div class="cred"><span class="cred-dot r"></span>Более 400 клиентов</div>
+        <div class="cred"><span class="cred-dot r"></span>Сертифицированный психотерапевт с высшим психологическим образованием</div>
+        <div class="cred"><span class="cred-dot b"></span>7 психотерапевтических групп</div>
+        <div class="cred"><span class="cred-dot b"></span>1000+ часов личной терапии и супервизий</div>
+        <div class="cred"><span class="cred-dot r"></span>Обучение по интегральному подходу проф. А.В. Непомнящего</div>
+        <div class="cred"><span class="cred-dot b"></span>Участница международных конференций по трансперсональной психологии</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach section fade-up">
+  <p class="s-tag rose">Мой подход</p>
+  <h2 class="s-title">Смотрю на четыре уровня сразу</h2>
+  <p class="approach-intro placeholder">[Место для описания подхода — здесь можно рассказать своими словами, что такое интегральный подход, почему ты работаешь именно так, что это даёт клиенту. 2–4 предложения.]</p>
+  <div class="approach-grid">
+    <div class="ap-card">
+      <span class="ap-num">I</span>
+      <p class="ap-title">Тело</p>
+      <p class="ap-desc">Как живёт твоя нервная система, что говорит тело, как физическое состояние влияет на психику.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">II</span>
+      <p class="ap-title">Психика</p>
+      <p class="ap-desc">Убеждения, паттерны, эмоции, травматический опыт — всё, что формирует твои реакции изнутри.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">III</span>
+      <p class="ap-title">Отношения</p>
+      <p class="ap-desc">Как ты строишь контакт с другими, где теряешь себя, где нарушаются границы и почему.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">IV</span>
+      <p class="ap-title">Смыслы</p>
+      <p class="ap-desc">Зачем вообще всё это? Что для тебя важно, куда ты движешься, в чём твоя внутренняя опора.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section fade-up" id="services">
+  <p class="s-tag rose">Услуги</p>
+  <div class="svc-list">
+
+    <div class="svc-item">
+      <div class="svc-body">
+        <p class="svc-name">Индивидуальная психотерапия</p>
+        <p class="svc-desc">Работаем с тем, что происходит именно с тобой — без шаблонов. Смотрю на все уровни сразу и помогаю найти, откуда это растёт.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Тревога</span>
+          <span class="svc-tag">Выгорание</span>
+          <span class="svc-tag">Кризис смыслов</span>
+          <span class="svc-tag">Отношения</span>
+          <span class="svc-tag">Потери</span>
+        </div>
+      </div>
+      <div class="svc-footer">
+        <div class="svc-price">
+          <span class="price-main">5 000 ₽</span>
+          <span class="price-note">60–80 мин · онлайн</span>
+        </div>
+        <button type="button" class="btn-svc" onclick="openBookingModal()">Записаться</button>
+      </div>
+    </div>
+
+    <div class="svc-item">
+      <div class="svc-body">
+        <p class="svc-name">Психотерапия пар</p>
+        <p class="svc-desc">Когда разговоры идут по кругу и вы не слышите друг друга. Помогаю найти язык, на котором оба можете говорить и понимать потребности друг друга.</p>
+        <div class="svc-tags">
+          <span class="svc-tag b">Кризис в паре</span>
+          <span class="svc-tag b">Конфликты</span>
+          <span class="svc-tag b">Коммуникация</span>
+          <span class="svc-tag b">Потребности</span>
+        </div>
+      </div>
+      <div class="svc-footer">
+        <div class="svc-price">
+          <span class="price-main">7 000 ₽</span>
+          <span class="price-note">1,5–2 ч · онлайн</span>
+        </div>
+        <button type="button" class="btn-svc" onclick="openBookingModal()">Записаться</button>
+      </div>
+    </div>
+
+    <div class="svc-item">
+      <div class="svc-body">
+        <p class="svc-name">Диагностическая сессия</p>
+        <p class="svc-desc">Если хочешь понять, что вообще происходит — и получить чёткую карту, а не просто поговорить. Составляю персональный план по всем линиям развития с рекомендациями и литературой.</p>
+        <div class="svc-steps">
+          <div class="svc-step"><span class="svc-step-n">1 →</span>Созвон 90 мин — разбираем твою ситуацию по всем линиям развития</div>
+          <div class="svc-step"><span class="svc-step-n">2 →</span>Составляю карту — диагностика, план действий, литература</div>
+          <div class="svc-step"><span class="svc-step-n">3 →</span>Через неделю разбираем карту вместе ~40 мин, отвечаю на вопросы</div>
+        </div>
+      </div>
+      <div class="svc-footer">
+        <div class="svc-price">
+          <span class="price-main">6 000 ₽</span>
+          <span class="price-note">отдельный продукт</span>
+        </div>
+        <button type="button" class="btn-svc" onclick="openBookingModal()">Записаться</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method section fade-up" id="method">
+  <p class="s-tag rose" style="display:block; text-align:center; max-width:560px; margin:0 auto 18px;">Как я работаю</p>
+  <div class="method-wrap">
+    <div class="method-card method-card-first">
+      <div class="method-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+          <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+          <path d="m21 3 1 11h-2"/>
+          <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+          <path d="M3 4h8"/>
+        </svg>
+      </div>
+      <h3>Первая встреча</h3>
+      <p>Знакомимся, выстраиваем контакт и план. Помогаю сформулировать запрос, если он не ясен.</p>
+    </div>
+    <div class="method-card method-card-light">
+      <h3>Индивидуальный подход</h3>
+      <p>Использую интегральную модель Кена Уилбера, чтобы подобрать персонализированные методы работы. Это позволяет мягко исследовать внутренние состояния, находить опору в себе и развивать навыки саморегуляции.</p>
+    </div>
+    <div class="method-card method-card-dark">
+      <h3>Домашние практики</h3>
+      <p>Закрепляем результат через практику: домашние задания помогают осознанно интегрировать новые навыки в жизнь.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section fade-up" id="contact">
+  <div class="contact-grid">
+    <div>
+      <h2 class="contact-title">Готова сделать первый шаг?</h2>
+      <p class="contact-sub">Напиши мне — и мы найдём время для знакомства. Первая сессия без обязательств.</p>
+      <div class="contact-links">
+        <a href="https://t.me/alina_henry" class="c-link" target="_blank">
+          <span class="c-link-ico">✈</span>
+          Телеграм — @alina_henry
+        </a>
+        <a href="https://wa.me/79500227561" class="c-link" target="_blank">
+          <span class="c-link-ico">◎</span>
+          WhatsApp — +7 950 022-75-61
+        </a>
+        <a href="mailto:henrikovna90@gmail.com" class="c-link">
+          <span class="c-link-ico">@</span>
+          henrikovna90@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="contact-box">
+      <h3>Не знаешь с чего начать?</h3>
+      <p>Начни с интегральной диагностики — за одну встречу поймёшь, что происходит, и получишь карту с конкретным планом что делать дальше.</p>
+      <a href="https://t.me/alina_henry" class="btn-white" target="_blank">Написать Алине</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING MODAL -->
+<div class="booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="bookingTitle">
+  <div class="booking-overlay" onclick="closeBookingModal()"></div>
+  <div class="booking-dialog">
+    <button type="button" class="booking-close" onclick="closeBookingModal()" aria-label="Закрыть">×</button>
+    <h3 class="booking-title" id="bookingTitle">Запись на сессию</h3>
+    <p class="booking-sub">Заполни форму — я получу заявку в Телеграме и свяжусь с тобой в ближайшее время, чтобы договориться о встрече.</p>
+
+    <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+      <label class="booking-label">
+        <span>Как тебя зовут</span>
+        <input type="text" name="name" required autocomplete="given-name" placeholder="Имя">
+      </label>
+
+      <label class="booking-label">
+        <span>С чем хочешь разобраться</span>
+        <textarea name="request" rows="4" required placeholder="Несколько слов о том, что происходит"></textarea>
+      </label>
+
+      <label class="booking-label">
+        <span>Когда удобно встретиться</span>
+        <textarea name="schedule" rows="2" placeholder="Например: будни после 19:00 (Мск), или выходные"></textarea>
+      </label>
+
+      <label class="booking-label">
+        <span>Email или телефон (по желанию)</span>
+        <input type="text" name="contact" placeholder="Если удобнее, чтобы я написала сама">
+      </label>
+
+      <button type="submit" class="btn-primary booking-submit">Отправить заявку</button>
+    </form>
+
+    <div class="booking-success">
+      <div class="booking-success-icon">✓</div>
+      <h3>Заявка готова</h3>
+      <p>Открываю Телеграм — остаётся нажать «Отправить».<br>Я отвечу в ближайшее время.</p>
+      <a href="#" onclick="closeBookingModal(); return false;">Закрыть</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Алина Генри</span>
+  <span>Интегральный психотерапевт · Онлайн</span>
+  <a href="mailto:henrikovna90@gmail.com">henrikovna90@gmail.com</a>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* ── BOOKING MODAL ── */
+// NOTE: Пока бот не сделан, заявка открывает чат @alina_henry с готовым текстом.
+// Когда будет бот + Google Calendar → заменить тело handleBookingSubmit
+// на fetch('/api/booking', { method: 'POST', body: JSON.stringify(data) })
+// и поднять маленький backend (Cloudflare Workers / Vercel) с вызовом Telegram Bot API.
+
+const TELEGRAM_USERNAME = 'alina_henry';
+
+function openBookingModal() {
+  const m = document.getElementById('bookingModal');
+  m.classList.add('open');
+  m.classList.remove('success');
+  m.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => {
+    const first = m.querySelector('input[name="name"]');
+    if (first) first.focus();
+  }, 120);
+}
+
+function closeBookingModal() {
+  const m = document.getElementById('bookingModal');
+  m.classList.remove('open');
+  m.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    m.classList.remove('success');
+    const form = m.querySelector('.booking-form');
+    if (form) form.reset();
+  }, 300);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const m = document.getElementById('bookingModal');
+    if (m.classList.contains('open')) closeBookingModal();
+  }
+});
+
+function handleBookingSubmit(e) {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const name = (fd.get('name') || '').trim();
+  const request = (fd.get('request') || '').trim();
+  const schedule = (fd.get('schedule') || '').trim();
+  const contact = (fd.get('contact') || '').trim();
+
+  const lines = [
+    'Заявка на сессию (с сайта)',
+    '',
+    'Имя: ' + name,
+    'Запрос: ' + request,
+  ];
+  if (schedule) lines.push('Удобное время: ' + schedule);
+  if (contact) lines.push('Контакт: ' + contact);
+
+  const message = lines.join('\n');
+
+  // Open Telegram chat with pre-filled message (works in both web and mobile clients)
+  const url = 'https://t.me/' + TELEGRAM_USERNAME + '?text=' + encodeURIComponent(message);
+
+  // Also copy to clipboard as a fallback (in case ?text= is ignored by the client)
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(message).catch(() => {});
+  }
+
+  window.open(url, '_blank', 'noopener');
+
+  // Show success state
+  const m = document.getElementById('bookingModal');
+  m.classList.add('success');
+}
+</script>
+</body>
+</html>

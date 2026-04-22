@@ -1,0 +1,3013 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Алина Генри — интегральный психотерапевт</title>
+<script>
+  // Run ASAP, before browser restores scroll
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --rose:       #E98074;
+  --rose-light: rgba(233,128,116,0.35);
+  --rose-pale:  #F2EEEA;
+  --rose-deep:  #E85A4F;
+  --blue:       #D8C3A5;
+  --blue-light: #D8C3A5;
+  --blue-pale:  rgba(216,195,165,0.18);
+  --blue-deep:  #8E8D8A;
+  --cream:      #EAE7DC;
+  --text:       #000000;
+  --text-mid:   #2A2A2A;
+  --text-muted: #555555;
+  --white:      #FFFFFF;
+  --border-r:   rgba(233,128,116,0.2);
+  --border-b:   rgba(216,195,165,0.3);
+}
+
+html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
+body {
+  font-family: 'DM Serif Display', serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(245, 240, 230, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s, background 0.25s;
+}
+nav.scrolled {
+  background: rgba(245, 240, 230, 0.92);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+.nav-name {
+  position: relative;
+  display: inline-block;
+}
+.nav-glyph {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+.nav-glyph .glyph-orbit-1,
+.nav-glyph .glyph-orbit-2,
+.nav-glyph .glyph-orbit-3 {
+  transform-origin: 100px 100px !important;
+}
+.nav-logo .nav-name-text {
+  position: relative; z-index: 2;
+  color: #000;
+}
+.nav-logo > span { position: relative; z-index: 1; }
+.nav-logo {
+  position: relative; z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 33px; font-weight: 500; letter-spacing: 0.03em;
+  color: var(--text); text-decoration: none;
+  line-height: 1.1;
+}
+.nav-logo span { color: var(--rose); }
+.nav-sub {
+  font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #5D5C58; font-weight: 400; margin-top: 4px;
+}
+.nav-links {
+  display: flex; gap: 24px; list-style: none;
+  position: fixed; top: 18px; right: 16px; z-index: 101;
+  align-items: center;
+}
+.nav-links li { display: flex; align-items: center; }
+.nav-links li:not(:first-child):not(:has(.nav-cta))::before {
+  content: ''; display: inline-block;
+  width: 1px; height: 14px;
+  background: rgba(26,26,24,0.2);
+  margin-right: 24px;
+}
+.nav-links a {
+  font-size: 16px; font-weight: 700; letter-spacing: 0.1em;
+  color: var(--text); text-decoration: none; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--rose); }
+.nav-links li.nav-tg-item::before { display: none !important; }
+.nav-tg-item a {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  color: var(--text) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.nav-tg-item a:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: var(--text);
+  color: var(--text) !important;
+}
+.nav-tg-icon { width: 16px; height: 16px; flex-shrink: 0; }
+.nav-burger { display: none; }
+.nav-menu-close { display: none; }
+.nav-cta {
+  background: var(--rose); color: var(--white) !important;
+  padding: 10px 24px; letter-spacing: 0.08em;
+  border-radius: 999px;
+  transition: background 0.2s, opacity 0.35s ease, transform 0.35s ease !important;
+}
+.nav-cta:hover { background: var(--rose-deep) !important; color: var(--white) !important; }
+/* Hide the Записаться button until user scrolls past the hero */
+.nav-links li:has(.nav-cta) {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+nav.scrolled .nav-links li:has(.nav-cta) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  padding-top: 72px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  align-items: flex-start; text-align: left;
+  padding: 80px 60px 80px 60px;
+  background: var(--cream);
+  position: relative;
+}
+.hero-left::after {
+  content: '';
+  position: absolute; right: 0; top: 10%; bottom: 10%;
+  width: 1px; background: var(--border-r);
+}
+.hero-glyph {
+  position: absolute;
+  left: 35%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1100px; height: 1100px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-sub {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px; font-weight: 400; letter-spacing: 0.06em;
+  color: var(--text); margin-top: -16px; margin-bottom: 8px;
+}
+.hero-sub-small {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; font-weight: 600; letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--text); margin-bottom: 20px;
+}
+.hero-btns { align-self: flex-start; margin-top: 48px; margin-left: 0; }
+@keyframes orbitSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes orbitReverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+@keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+.glyph-orbit-1 { transform-origin: 250px 250px; animation: orbitSlow 120s linear infinite; }
+.glyph-orbit-2 { transform-origin: 250px 250px; animation: orbitReverse 90s linear infinite; }
+.glyph-orbit-3 { transform-origin: 250px 250px; animation: orbitSlow 60s linear infinite; }
+.glyph-moon-1 { transform-origin: 250px 250px; animation: orbitSlow 40s linear infinite; }
+.glyph-moon-2 { transform-origin: 250px 250px; animation: orbitReverse 55s linear infinite; }
+.glyph-moon-3 { transform-origin: 250px 250px; animation: orbitSlow 30s linear infinite; }
+.glyph-core { animation: pulse 8s ease-in-out infinite; }
+.glyph-dots-1 { transform-origin: 250px 250px; animation: orbitSlow 100s linear infinite; }
+.glyph-dots-2 { transform-origin: 250px 250px; animation: orbitReverse 75s linear infinite; }
+.hero-left > *:not(.hero-glyph) { position: relative; z-index: 1; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--rose); font-weight: 600; margin-bottom: 32px;
+}
+.hero-tag::before {
+  content: ''; width: 28px; height: 1px; background: #E98074;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(51px, 5vw, 77px);
+  font-weight: 700; line-height: 1.05;
+  margin-bottom: 32px;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+.hero-title em {
+  font-style: normal; color: var(--rose-deep);
+  font-weight: 700;
+  display: block;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 35px; font-weight: 500; letter-spacing: 0.08em;
+  color: var(--text); margin-bottom: 8px;
+  font-style: normal; text-transform: uppercase;
+}
+.hero-role {
+  font-size: 24px; font-weight: 300; color: var(--text-muted);
+  margin-bottom: 48px; letter-spacing: 0.04em;
+}
+.hero-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-primary {
+  padding: 14px 32px;
+  background: var(--rose);
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px; font-weight: 700; letter-spacing: 0.02em;
+  text-transform: none; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--rose);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  display: inline-block; text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.btn-primary:hover {
+  background: #D87565;
+  border-color: #D87565;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(232, 144, 128, 0.3);
+}
+.btn-secondary {
+  padding: 12px 28px;
+  background: rgba(216, 195, 165, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #5D5C58;
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid rgba(216, 195, 165, 0.6);
+  border-radius: 999px;
+  transition: all 0.25s; display: inline-block; text-align: center;
+}
+.btn-secondary:hover { background: rgba(216, 195, 165, 0.5); border-color: #8E8D8A; color: #1A1A18; }
+
+.hero-right {
+  position: relative;
+  background: transparent;
+  overflow: visible;
+  border-radius: 0;
+  margin: 0;
+  padding: 48px 48px 48px 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.hero-photo-wrap {
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+.hero-photo-wrap::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(245, 240, 230, 0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-photo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+}
+.hero-badge {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(233,128,116,0.88);
+  backdrop-filter: blur(8px);
+  padding: 10px 14px;
+  display: flex; gap: 6px; align-items: center;
+}
+.badge-item { text-align: center; flex: 1; min-width: 0; }
+.badge-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 33px; font-weight: 400; color: var(--white);
+  display: block; line-height: 1;
+  letter-spacing: -0.01em;
+}
+.badge-label {
+  font-size: 13.5px; color: rgba(255,255,255,0.85);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  display: block; margin-top: 2px; line-height: 1.15;
+}
+.badge-item:last-child .badge-label { font-size: 12.5px; letter-spacing: 0.03em; }
+
+/* ── SECTION BASE ── */
+.section { padding: 100px 60px; }
+.s-tag, .about-text .s-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 22px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 18px; line-height: 1.4;
+}
+.s-tag.rose { color: var(--rose-deep); }
+.s-tag.rose::before { content: ''; width: 28px; height: 2px; background: var(--rose-deep); }
+.s-tag.blue { color: var(--text); }
+.s-tag.blue::before { content: ''; width: 28px; height: 2px; background: var(--rose-deep); }
+.s-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 3.5vw, 54px);
+  font-weight: 400; line-height: 1.12; margin-bottom: 52px;
+}
+
+/* ── REQUESTS ── */
+.requests { background: rgba(216,195,165,0.15); }
+.requests .s-title { margin-bottom: 0; }
+.requests-intro {
+  font-size: 20px; font-weight: 300; color: var(--text-mid);
+  max-width: 520px; margin-top: 18px; margin-bottom: 52px; line-height: 1.8;
+}
+.requests-outro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 500;
+  color: var(--text); line-height: 1.3;
+  max-width: 680px; margin: 14px auto 0; text-align: center;
+}
+.req-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  row-gap: 14px; column-gap: 28px;
+}
+.req-carousel { position: relative; }
+.req-nav { display: none; }
+.req-card {
+  background: var(--white);
+  padding: 12px 20px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.25s;
+  cursor: default;
+  text-align: center;
+}
+.req-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(192,128,128,0.14); }
+.req-card:nth-child(even):hover { box-shadow: 0 8px 24px rgba(90,143,191,0.14); }
+.req-card--more .req-cta {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--rose);
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--rose);
+  border-radius: 999px;
+  transition: all 0.25s; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(232,90,79,0.25);
+}
+.req-card--more .req-cta:hover {
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232,90,79,0.35);
+}
+.req-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700; line-height: 1.15;
+  margin-bottom: 6px; color: var(--text);
+  -webkit-text-stroke: 0.4px currentColor;
+}
+.req-desc {
+  font-size: 20px; font-weight: 400; color: var(--text-mid); line-height: 1.55;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-spacing: -0.03em;
+}
+
+/* ── ABOUT ── */
+.about { background: var(--cream); padding-top: 180px; position: relative; overflow: hidden; }
+.about-glyph {
+  position: absolute;
+  right: -180px; top: 50%;
+  transform: translateY(-50%);
+  width: 720px; height: 720px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+.about-wrap {
+  display: grid; grid-template-columns: 460px 1fr; gap: 72px; align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.about-photo-wrap { position: relative; }
+.about-photo-wrap img {
+  width: 100%; aspect-ratio: 4/5;
+  object-fit: cover; object-position: center top;
+  display: block;
+  border-radius: 18px;
+}
+.about-text { padding-top: 0; }
+.about-text .s-tag { margin-top: -6px; margin-bottom: 24px; }
+.about-text p {
+  font-size: 19px; font-weight: 400; color: var(--text-mid);
+  line-height: 1.75; margin-bottom: 20px;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.about-text p strong { color: var(--text); font-weight: 600; }
+.creds-list { margin-top: 36px; display: flex; flex-direction: column; gap: 0; }
+.cred {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 10px 0; border-bottom: none;
+  font-size: 21px; font-weight: 500; color: var(--text-mid);
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.cred.cred-key { font-weight: 700; color: var(--text); }
+.cred-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 8px;
+}
+.cred-dot.r { background: var(--rose); }
+.cred-dot.b { background: var(--blue); }
+
+/* ── APPROACH ── */
+.approach { background: #F2EEEA; }
+.approach .s-title { margin-bottom: 12px; text-align: center; }
+.approach-intro {
+  font-size: 18px; font-weight: 400; color: var(--text-mid);
+  max-width: 780px; margin: 12px auto 36px; line-height: 1.7;
+  text-align: left;
+}
+.approach-intro p { margin-bottom: 16px; }
+.approach-intro p:last-child { margin-bottom: 0; }
+.approach-intro.expandable {
+  cursor: pointer;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 14px;
+  transition: box-shadow 0.25s;
+  text-align: left;
+}
+.approach-intro.expandable:hover { box-shadow: 0 6px 20px rgba(192,128,128,0.12); }
+.approach-intro-preview { margin: 0; }
+.approach-intro-full {
+  display: none;
+}
+.approach-intro-full p { margin-bottom: 14px; }
+.approach-intro-full p:last-child { margin-bottom: 0; }
+.approach-intro.open .approach-intro-preview { display: none; }
+.approach-intro.open .approach-intro-full { display: block; }
+.approach-intro-toggle {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 15px; color: #E85A4F; font-weight: 500;
+  letter-spacing: 0.04em;
+  border-bottom: 1px dashed rgba(233,128,116,0.5);
+}
+.approach-intro.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 24px 28px;
+  border: 1.5px dashed var(--rose-light);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.5);
+}
+.approach-grid {
+  display: none;
+}
+/* ── APPROACH ORBIT (desktop) ── */
+.approach-orbit {
+  position: relative;
+  width: 720px; height: 720px;
+  max-width: 100%;
+  margin: 20px auto 0;
+}
+.approach-orbit-glyph {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+.orbit-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px; height: 190px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F2EEEA 100%);
+  color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px; font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  border: 1.5px solid rgba(232,90,79,0.25);
+  box-shadow: 0 10px 40px rgba(26,26,24,0.12);
+  z-index: 2;
+  padding: 20px;
+}
+.orbit-core span { display: block; }
+.orbit-core small {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 4px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+.orbit-spin {
+  position: absolute; inset: 0;
+  animation: approachOrbit 70s linear infinite;
+  z-index: 3;
+}
+@keyframes approachOrbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes approachCounter {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+.planet {
+  position: absolute;
+  width: 160px; height: 160px;
+}
+.planet-top    { top: 0;    left: calc(50% - 80px); }
+.planet-right  { right: 0;  top: calc(50% - 80px); }
+.planet-bottom { bottom: 0; left: calc(50% - 80px); }
+.planet-left   { left: 0;   top: calc(50% - 80px); }
+.planet-inner {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  animation: approachCounter 70s linear infinite;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px;
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+  transform-origin: center center;
+  padding: 14px;
+}
+.planet-icon {
+  width: 48px; height: 48px;
+  stroke: currentColor;
+  fill: none;
+  flex-shrink: 0;
+}
+.planet-top    .planet-inner { background: #E85A4F; }
+.planet-right  .planet-inner { background: #8E8D8A; }
+.planet-bottom .planet-inner { background: #B89872; color: var(--white); }
+.planet-left   .planet-inner { background: #E98074; }
+.approach-legend {
+  margin: 36px auto 0;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  text-align: center;
+}
+.approach-legend-item p {
+  font-size: 14px; line-height: 1.45;
+  color: var(--text-mid);
+  margin: 0;
+}
+.approach-legend-item strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+/* original grid wrapper (kept for mobile) */
+.approach-grid-mobile {
+  display: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  max-width: 720px; margin: 0 auto;
+  position: relative;
+}
+.approach-grid::before,
+.approach-grid::after,
+.approach-arrow-v,
+.approach-arrow-h { display: none; }
+.approach-arrow-left { left: 25%; }
+.approach-arrow-right { left: 75%; }
+.ap-card:nth-child(2) { border: none; }
+.ap-card {
+  background: var(--white);
+  padding: 36px 28px;
+  transition: background 0.25s, transform 0.2s;
+  border-radius: 18px;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.ap-card { text-align: center; }
+.ap-num { display: none; }
+.ap-card:nth-child(1) { background: #E85A4F; }
+.ap-card:nth-child(1) .ap-title,
+.ap-card:nth-child(1) .ap-desc { color: var(--white); }
+.ap-card:nth-child(2) { background: #8E8D8A; }
+.ap-card:nth-child(2) .ap-title,
+.ap-card:nth-child(2) .ap-desc { color: var(--white); }
+.ap-card:nth-child(3) { background: #D8C3A5; }
+.ap-card:nth-child(3) .ap-title { color: var(--text); }
+.ap-card:nth-child(3) .ap-desc { color: var(--text-mid); }
+.ap-card:nth-child(4) { background: #E98074; }
+.ap-card:nth-child(4) .ap-title,
+.ap-card:nth-child(4) .ap-desc { color: var(--white); }
+.ap-card:hover { transform: translateY(-3px); }
+.ap-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px; font-weight: 400; color: var(--rose-light);
+  display: none; margin-bottom: 20px; line-height: 1;
+  letter-spacing: 0.01em;
+}
+.ap-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 37px; font-weight: 600; line-height: 1.15;
+  margin-bottom: 14px; color: var(--text);
+}
+.ap-desc { font-size: 20px; font-weight: 400; color: var(--text-mid); line-height: 1.75; }
+
+/* ── SERVICES ── */
+.services { background: var(--cream); }
+.services .s-tag { margin-bottom: 40px; }
+.svc-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.svc-item {
+  display: flex; flex-direction: column;
+  padding: 28px 28px;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--border-r);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  cursor: default;
+  position: relative;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.svc-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(192,128,128,0.12);
+  border-color: rgba(192,128,128,0.35);
+}
+.svc-item.featured {
+  border: 2px solid var(--rose);
+  box-shadow: 0 8px 24px rgba(232,90,79,0.08);
+}
+.svc-item.featured:hover {
+  border-color: var(--rose-deep);
+  box-shadow: 0 14px 30px rgba(232,90,79,0.18);
+}
+.svc-badge {
+  position: absolute;
+  top: -14px; left: 50%; transform: translateX(-50%);
+  background: rgba(233,128,116,0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #E85A4F;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1.5px solid rgba(232,90,79,0.4);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.svc-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 700; margin-bottom: 8px;
+  line-height: 1.15; text-align: center;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+.svc-desc {
+  font-size: 17px; font-weight: 400; color: var(--text-mid);
+  line-height: 1.55; margin-bottom: 18px;
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; justify-content: flex-start; }
+.svc-tag {
+  font-size: 14px; padding: 6px 14px; letter-spacing: 0.02em;
+  background: var(--white);
+  border: 1px solid var(--rose);
+  color: var(--rose-deep);
+  border-radius: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.svc-tag.b {
+  background: var(--white);
+  border-color: var(--rose);
+  color: var(--rose-deep);
+}
+.svc-steps { margin-top: 0; margin-bottom: 20px; display: flex; flex-direction: column; gap: 9px; }
+.svc-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.45;
+  text-align: left;
+  align-items: start;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.svc-step-n { color: var(--rose); font-weight: 600; flex-shrink: 0; }
+.svc-body { flex: 1; display: flex; flex-direction: column; }
+.svc-packages {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 14px;
+}
+.svc-pkg {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  padding: 11px 13px;
+  background: #FAF7F4;
+  border: 1px solid var(--border-r);
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  transition: border-color 0.2s, background 0.2s;
+}
+.svc-pkg.featured {
+  background: rgba(233,128,116,0.08);
+  border-color: var(--rose);
+}
+.svc-pkg-name {
+  font-size: 14px; font-weight: 500; color: var(--text);
+  line-height: 1.25;
+}
+.svc-pkg-save {
+  display: block;
+  font-size: 11px; font-weight: 400;
+  color: var(--rose-deep);
+  margin-top: 1px;
+  font-style: italic;
+}
+.svc-pkg-price {
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px; font-weight: 400;
+  color: var(--text);
+  white-space: nowrap;
+}
+.svc-pkg-hint {
+  font-size: 12px; color: var(--text-muted);
+  text-align: center;
+  margin-top: -4px; margin-bottom: 14px;
+  font-style: italic;
+}
+.svc-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-r);
+}
+.svc-price { text-align: left; }
+.svc-price .price-main { font-size: 32px; }
+.svc-price .price-note { font-size: 14px; }
+.btn-svc {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--rose);
+  color: var(--white);
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--rose);
+  border-radius: 999px;
+  transition: all 0.25s; white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(232,90,79,0.25);
+}
+.btn-svc:hover {
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232,90,79,0.35);
+}
+.price-main {
+  font-family: 'DM Serif Display', serif;
+  font-size: 39px; font-weight: 400;
+  color: var(--text); display: block; line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.price-note { font-size: 16px; color: var(--text-muted); font-weight: 400; display: block; margin-top: 4px; }
+
+/* ── HOW ── */
+.how { background: var(--blue-pale); }
+.how-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 3px;
+}
+.how-card {
+  background: var(--white);
+  padding: 44px 36px;
+  position: relative; overflow: hidden;
+}
+.how-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--blue-light);
+  transition: background 0.25s;
+}
+.how-card:hover::before { background: var(--rose); }
+.how-big-n {
+  font-family: 'DM Serif Display', serif;
+  font-size: 92px; font-weight: 400;
+  color: var(--blue-light); line-height: 1;
+  display: block; margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.how-title { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.how-desc { font-size: 18px; font-weight: 400; color: var(--text-mid); line-height: 1.75; }
+
+/* ── METHOD ── */
+.method { background: var(--cream); }
+.method-circle-wrap {
+  display: flex; justify-content: center;
+  margin-bottom: 48px;
+}
+@media (min-width: 961px) {
+  .method-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .method-circle-wrap { margin-bottom: 0; justify-content: flex-start; }
+  .method-circle { width: 520px; height: 520px; }
+  .method-panel { text-align: left; padding: 0; }
+  .method-hint { text-align: left; }
+}
+.method-circle {
+  position: relative;
+  width: 440px; height: 440px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(26,26,24,0.08);
+}
+.method-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.method-slice { cursor: pointer; transition: fill 0.25s; }
+.slice-first { fill: rgba(216,195,165,0.45); }
+.slice-individual { fill: #F2EEEA; }
+.slice-home { fill: rgba(233,128,116,0.25); }
+.slice-first:hover, .slice-first.active { fill: rgba(216,195,165,0.75); }
+.slice-individual:hover, .slice-individual.active { fill: rgba(242,238,234,1); filter: brightness(0.95); }
+.slice-home:hover, .slice-home.active { fill: rgba(233,128,116,0.45); }
+.method-sector {
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px; font-weight: 500;
+  color: var(--text); text-align: center;
+  line-height: 1.15; letter-spacing: 0.01em;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+.method-sector-top {
+  top: 18%; left: 50%; transform: translate(-50%, -50%);
+}
+.method-sector-br {
+  top: 66%; left: 76%; transform: translate(-50%, -50%);
+}
+.method-sector-bl {
+  top: 66%; left: 24%; transform: translate(-50%, -50%);
+}
+.method-center {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 100px; height: 100px; border-radius: 50%;
+  background: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(26,26,24,0.1);
+  z-index: 2;
+}
+.method-center svg {
+  width: 48px; height: 48px; stroke: #5D5C58;
+}
+.method-panel {
+  max-width: 640px; margin: 0 auto;
+  min-height: 120px;
+  text-align: center;
+  padding: 24px 28px;
+  background: transparent;
+  transition: background 0.3s;
+}
+.method-hint {
+  font-size: 20px; color: var(--text-muted);
+  font-style: italic;
+}
+.method-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 31px; font-weight: 500;
+  margin-bottom: 14px; color: var(--text);
+}
+.method-content p {
+  font-size: 20px; font-weight: 400;
+  color: var(--text-mid); line-height: 1.7;
+}
+@media (max-width: 560px) {
+  .method-circle { width: 340px; height: 340px; }
+  .method-sector { font-size: 22px; white-space: normal; }
+  .method-sector-top { top: 18%; }
+  .method-sector-br { top: 66%; left: 76%; }
+  .method-sector-bl { top: 66%; left: 24%; }
+  .method-center { width: 90px; height: 90px; }
+  .method-center svg { width: 44px; height: 44px; }
+}
+.method-wrap {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.method-card {
+  width: 100%;
+  padding: 34px 32px;
+  text-align: center;
+}
+.method-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 400;
+  margin-bottom: 12px; line-height: 1.2;
+}
+.method-card p {
+  font-size: 18px; line-height: 1.65; font-weight: 400;
+}
+.method-card-first {
+  background: rgba(216,195,165,0.25);
+  color: var(--text);
+  border-radius: 18px 18px 0 0;
+  padding-top: 36px;
+}
+.method-card-first .method-icon-wrap {
+  display: flex; justify-content: center; margin-bottom: 18px;
+}
+.method-card-first .method-icon-wrap svg {
+  width: 54px; height: 54px; stroke: #8E8D8A;
+}
+.method-card-first h3 { color: #5D5C58; }
+.method-card-first p { color: var(--text-mid); }
+.method-card-light {
+  background: var(--rose-pale);
+  color: var(--text);
+}
+.method-card-light h3 { color: var(--rose-deep); }
+.method-card-light p { color: var(--text-mid); }
+.method-card-dark {
+  background: var(--cream);
+  color: var(--text);
+  border: 1.5px solid var(--border-r);
+  border-radius: 0 0 18px 18px;
+}
+.method-card-dark h3 { color: var(--rose-deep); }
+.method-card-dark p { color: var(--text-mid); }
+@media (max-width: 560px) {
+  .method-card { padding: 28px 24px; }
+  .method-card-first { padding-top: 32px; }
+  .method-card h3 { font-size: 27px; }
+  .method-card p { font-size: 17px; }
+  .method-card-first .method-icon-wrap svg { width: 44px; height: 44px; }
+}
+
+/* ── REVIEWS ── */
+.reviews { background: var(--cream); padding-top: 67px; }
+.reviews-disclaimer {
+  max-width: 640px; margin: 6px auto 36px;
+  text-align: center;
+  font-size: 14px; color: var(--text-muted);
+  line-height: 1.55;
+}
+.reviews-carousel {
+  position: relative;
+  max-width: 1320px; margin: 0 auto;
+  padding: 0 60px;
+}
+.reviews-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 8px;
+}
+.reviews-grid::-webkit-scrollbar { display: none; }
+.review-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 64px; height: 64px;
+  background: transparent;
+  color: #FFFFFF;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer; z-index: 3;
+  display: flex; align-items: center; justify-content: center;
+  filter:
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  transition: transform 0.2s, filter 0.2s;
+}
+.review-nav svg { width: 56px; height: 56px; display: block; stroke: #FFFFFF; }
+.review-nav:hover {
+  transform: translateY(-50%) scale(1.08);
+  filter:
+    drop-shadow(0 0 3px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+}
+.review-nav-prev { left: -8px; }
+.review-nav-next { right: -8px; }
+.review-card {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(26,26,24,0.05);
+  min-width: 0;
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+}
+.review-screenshot-wrap {
+  position: relative;
+  width: 100%;
+  background: rgba(216,195,165,0.15);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.review-screenshot-wrap img {
+  width: 100%; height: auto;
+  display: block;
+}
+.review-placeholder {
+  color: var(--text-muted);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+.review-context {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--text-mid);
+  text-align: center;
+  line-height: 1.5;
+  border-top: 1px solid var(--border-r);
+}
+.reviews-more {
+  display: block; margin: 32px auto 0;
+  background: transparent;
+  border: 1.5px solid rgba(233,128,116,0.5);
+  color: #E85A4F;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; letter-spacing: 0.08em;
+  text-transform: uppercase; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.reviews-more:hover { background: rgba(233,128,116,0.1); border-color: #E85A4F; }
+@media (max-width: 960px) {
+  .reviews-carousel { max-width: 520px; padding: 0 44px; }
+  .reviews-grid { align-items: center; gap: 0; }
+  .review-card { flex: 0 0 100%; scroll-snap-align: center; }
+}
+@media (max-width: 560px) {
+  .reviews-carousel { padding: 0 40px; }
+  .reviews-disclaimer { font-size: 13px; margin-bottom: 24px; }
+  .review-nav { width: 52px; height: 52px; }
+  .review-nav svg { width: 44px; height: 44px; }
+}
+
+/* ── FAQ ── */
+.faq { background: var(--cream); }
+.faq-list {
+  max-width: 780px; margin: 0 auto;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--border-r);
+  overflow: hidden;
+  transition: box-shadow 0.25s;
+}
+.faq-item.open { box-shadow: 0 8px 24px rgba(192,128,128,0.10); }
+.faq-question {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 22px 26px;
+  background: transparent; border: none; cursor: pointer;
+  text-align: left;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 500; color: var(--text);
+  line-height: 1.25;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: #E85A4F; }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 26px;
+}
+.faq-item.open .faq-answer {
+  max-height: 1000px;
+  padding-bottom: 24px;
+}
+.faq-answer p {
+  font-size: 16px; line-height: 1.7; color: var(--text-mid);
+  margin-bottom: 12px;
+}
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer p strong { color: var(--text); font-weight: 600; }
+@media (max-width: 560px) {
+  .faq-question { padding: 18px 20px; font-size: 21px; }
+  .faq-answer { padding: 0 20px; }
+  .faq-item.open .faq-answer { padding-bottom: 20px; }
+  .faq-answer p { font-size: 15px; }
+}
+
+/* ── ARTICLES ── */
+.articles { background: var(--cream); }
+.articles-wrap {
+  max-width: 880px;
+  margin: 20px auto 0;
+}
+.article-card {
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 18px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(192,128,128,0.1);
+  border-color: rgba(192,128,128,0.35);
+}
+.article-meta {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 13px; color: var(--text-muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+.article-meta .article-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--rose);
+  flex-shrink: 0;
+}
+.article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 600;
+  line-height: 1.2; margin-bottom: 12px;
+  color: var(--text);
+}
+.article-excerpt {
+  font-size: 17px; color: var(--text-mid);
+  line-height: 1.65; margin-bottom: 18px;
+}
+.article-readmore {
+  display: inline-block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px; letter-spacing: 0.04em;
+  color: var(--rose-deep); text-decoration: none;
+  border-bottom: 1px solid rgba(232, 90, 79, 0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  cursor: pointer; background: none; border-top: none; border-left: none; border-right: none;
+}
+.article-readmore:hover { color: var(--rose); border-bottom-color: var(--rose); }
+.article-full {
+  display: none;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-r);
+}
+.article-full p {
+  font-size: 17px; color: var(--text-mid);
+  line-height: 1.75; margin-bottom: 16px;
+}
+.article-full p strong { color: var(--text); font-weight: 600; }
+.article-full p em { color: var(--text-mid); font-style: italic; }
+.article-full h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 600;
+  color: var(--text); margin: 32px 0 12px;
+  line-height: 1.2;
+}
+.article-full h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 600;
+  color: var(--text); margin: 26px 0 10px;
+  line-height: 1.25;
+}
+.article-full hr {
+  border: none; height: 1px;
+  background: var(--border-r);
+  margin: 28px auto;
+  width: 80px;
+}
+.article-full ul {
+  margin: 0 0 16px 22px;
+  padding: 0;
+}
+.article-full ul li {
+  font-size: 17px; color: var(--text-mid);
+  line-height: 1.65; margin-bottom: 6px;
+}
+.article-full ul li::marker { color: var(--rose); }
+.article-subtitle {
+  font-size: 17px; color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5; margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-r);
+}
+.article-quadrant {
+  background: rgba(233,128,116,0.05);
+  border-left: 3px solid var(--rose);
+  padding: 16px 20px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0 16px;
+}
+.article-quadrant .quadrant-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  color: var(--text); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.article-quadrant .quadrant-title::before {
+  content: ''; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--rose);
+  flex-shrink: 0;
+}
+.article-quadrant p {
+  font-size: 16px; line-height: 1.6;
+  margin-bottom: 0;
+}
+.article-callout {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-style: italic;
+  color: var(--text);
+  border-left: 3px solid var(--rose);
+  padding: 8px 0 8px 20px;
+  margin: 20px 0;
+  line-height: 1.45;
+}
+.article-card.open .article-full { display: block; }
+.article-card.open .article-readmore { display: none; }
+.article-collapse {
+  display: none;
+  margin-top: 20px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text-muted); text-decoration: none;
+  cursor: pointer; background: none; border: none;
+}
+.article-card.open .article-collapse { display: inline-block; }
+.article-collapse:hover { color: var(--rose); }
+.article-cta {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 28px;
+  background: var(--rose);
+  color: var(--white) !important;
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--rose);
+  border-radius: 999px;
+  transition: all 0.25s;
+  box-shadow: 0 4px 12px rgba(232,90,79,0.25);
+}
+.article-cta:hover {
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232,90,79,0.35);
+}
+@media (max-width: 720px) {
+  .article-card { padding: 22px 20px; border-radius: 14px; }
+  .article-title { font-size: 24px; }
+  .article-excerpt, .article-full p { font-size: 15px; }
+  .article-meta { font-size: 11px; }
+  .article-full h3 { font-size: 22px; }
+  .article-full h4 { font-size: 18px; }
+}
+
+/* ── CONTACT ── */
+.contact { background: #E85A4F; color: var(--white); }
+.contact-top { max-width: 720px; margin: 0 auto 44px; }
+.contact-top .contact-box {
+  margin: 0 auto; max-width: 560px;
+  text-align: center;
+}
+.contact-top .contact-box .contact-title {
+  color: var(--white); margin-bottom: 20px; line-height: 1.15;
+}
+.contact .contact-links { max-width: 560px; margin: 0 auto; }
+@media (min-width: 961px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .contact-top { max-width: none; margin: 0; }
+  .contact-top .contact-box { max-width: none; text-align: left; }
+  .contact-top .contact-box .btn-white,
+  .contact-top .contact-box h3 { text-align: left; }
+  .contact .contact-links { max-width: none; margin: 0; }
+}
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+}
+.contact .s-tag { color: var(--rose-light); }
+.contact .s-tag::before { background: var(--rose-light); }
+.contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 3.5vw, 56px);
+  font-weight: 400; line-height: 1.15; margin-bottom: 20px;
+  color: var(--white);
+}
+.contact-sub {
+  font-size: 19px; font-weight: 300;
+  color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 44px;
+}
+.contact-links { display: flex; flex-direction: column; gap: 0; }
+.c-link {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none; color: rgba(255,255,255,0.85);
+  font-size: 21px; font-weight: 400;
+  transition: color 0.2s, padding-left 0.2s;
+}
+.c-link:hover { color: var(--white); padding-left: 8px; }
+.c-link-ico {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+  font-family: serif;
+  color: var(--white);
+}
+.c-link-ico svg {
+  width: 20px; height: 20px; display: block;
+}
+.contact-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  padding: 48px 40px;
+}
+.contact-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 400; color: var(--white);
+  margin-bottom: 16px; line-height: 1.3;
+}
+.contact-box p {
+  font-size: 21px; font-weight: 300;
+  color: var(--white); line-height: 1.75; margin-bottom: 32px;
+}
+.btn-white {
+  display: inline-block;
+  padding: 15px 36px;
+  background: var(--white);
+  color: var(--rose-deep);
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-white:hover { background: var(--rose-pale); transform: translateY(-2px); }
+
+/* ── BOOKING MODAL ── */
+.booking-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  display: none; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.booking-modal.open { display: flex; }
+.booking-overlay {
+  position: absolute; inset: 0;
+  background: rgba(26, 16, 16, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: bookingFade 0.25s ease;
+}
+.booking-dialog {
+  position: relative; z-index: 1;
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 44px 40px 36px;
+  width: 100%; max-width: 520px;
+  max-height: 90vh; overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(26,16,16,0.25);
+  animation: bookingSlide 0.3s ease;
+}
+@keyframes bookingFade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes bookingSlide { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+.booking-close {
+  position: absolute; top: 14px; right: 14px;
+  background: transparent; border: none;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: 30px; line-height: 1; cursor: pointer;
+  color: var(--text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+.booking-close:hover { background: var(--rose-pale); color: var(--rose-deep); }
+.booking-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 400; color: var(--text);
+  margin: 6px 0 10px; line-height: 1.2;
+}
+.booking-sub {
+  font-size: 18px; color: var(--text-mid);
+  line-height: 1.6; margin-bottom: 26px;
+}
+.booking-form { display: flex; flex-direction: column; gap: 16px; }
+.booking-label { display: flex; flex-direction: column; gap: 6px; }
+.booking-label > span {
+  font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-mid); font-weight: 600;
+}
+.booking-label input,
+.booking-label textarea {
+  font-family: 'Raleway', sans-serif; font-size: 19px; color: var(--text);
+  padding: 13px 16px;
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+  width: 100%;
+}
+.booking-label input:focus,
+.booking-label textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(192, 128, 128, 0.12);
+}
+.booking-label textarea { min-height: 76px; font-family: 'Raleway', sans-serif; line-height: 1.5; }
+.booking-submit { margin-top: 10px; width: 100%; cursor: pointer; }
+.booking-success {
+  display: none;
+  text-align: center;
+  padding: 20px 0 8px;
+}
+.booking-modal.success .booking-form,
+.booking-modal.success .booking-title,
+.booking-modal.success .booking-sub { display: none; }
+.booking-modal.success .booking-success { display: block; }
+.booking-success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--rose-pale); color: var(--rose-deep);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 32px; margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.booking-success h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 400; color: var(--text);
+  margin-bottom: 12px;
+}
+.booking-success p {
+  font-size: 18px; color: var(--text-mid);
+  line-height: 1.6; margin-bottom: 18px;
+}
+.booking-success a {
+  display: inline-block;
+  font-size: 17px; color: var(--rose-deep);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+@media (max-width: 560px) {
+  .booking-dialog { padding: 36px 22px 26px; border-radius: 16px; }
+  .booking-title { font-size: 30px; }
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #1A1A18;
+  padding: 28px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  color: rgba(255,255,255,0.3); font-size: 16px; font-weight: 300;
+}
+footer a { color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: rgba(255,255,255,0.7); }
+
+/* ── MOBILE ── */
+@media (max-width: 960px) {
+  /* --- MOBILE TYPOGRAPHY RESET --- */
+  body { font-size: 16px; line-height: 1.5; }
+  .hero-title { font-size: 39px !important; line-height: 1.1; }
+  .s-title { font-size: 26px !important; line-height: 1.2; }
+  .contact-title { font-size: 26px !important; line-height: 1.2; }
+  .booking-title { font-size: 24px; }
+  .req-title, .ap-title, .svc-name, .method-detail h3, .faq-question, .method-content h3, .contact-box h3 { font-size: 20px !important; font-weight: 600; line-height: 1.25; }
+  .req-title { font-size: 21px !important; font-weight: 700 !important; -webkit-text-stroke: 0.4px currentColor; }
+  .req-desc, .ap-desc, .svc-desc, .cred, .about-text p, .approach-intro, .approach-intro-preview, .approach-intro-full p, .contact-sub, .contact-box p, .c-link, .faq-answer p, .method-content p, .method-hint, .hero-role, .hero-sub, .hero-sub-small, .requests-intro, .requests-outro { font-size: 15px !important; line-height: 1.5 !important; }
+  .about-text .s-tag, .about-text p.s-tag { font-size: 22px !important; line-height: 1.4 !important; }
+  .about-quote-box { font-size: 15px !important; line-height: 1.5 !important; }
+  .price-main { font-size: 26px !important; }
+  .price-note, .svc-step, .svc-tag, .price-note { font-size: 13px !important; }
+  .hero-name { font-size: 18px; }
+  nav { padding: 16px 24px; }
+  /* Mobile nav: only the Telegram chip, no burger, no menu items */
+  .nav-burger { display: none !important; }
+  .nav-links {
+    display: flex !important;
+    position: fixed; top: 18px; right: 16px;
+    flex-direction: row; align-items: center; gap: 0;
+    z-index: 200;
+    background: none; border: none; box-shadow: none; padding: 0; border-radius: 0;
+    width: auto;
+  }
+  .nav-links li:not(.nav-tg-item) { display: none !important; }
+  .nav-links li.nav-tg-item { display: flex !important; align-items: center; }
+  .nav-links li.nav-tg-item::before { display: none !important; }
+  .nav-tg-item a {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+  .nav-tg-icon { width: 14px; height: 14px; }
+  .nav-close-area { display: none; }
+  nav { align-items: flex-start; }
+  nav > div:first-child { flex: 1; min-width: 0; margin-right: 16px; }
+  .nav-logo { font-size: 31px; }
+  .nav-sub { overflow: hidden; text-overflow: ellipsis; }
+  .nav-sub { font-size: 16px; margin-top: 5px; line-height: 1.4; letter-spacing: 0.06em; }
+  .section { padding: 64px 24px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 100px 24px 48px; align-items: center; text-align: center; }
+  .hero-btns { align-self: center; }
+  .hero-glyph { left: 50%; right: auto; top: calc(50% - 16px); transform: translate(-50%, -50%); width: 600px; height: 600px; }
+  .hero-right { height: 483px; padding: 24px 12px 36px; overflow: visible; background: transparent; margin: 0; display: block; }
+  .hero-photo-wrap { border-radius: 20px; overflow: hidden; box-shadow: none; }
+  .hero-photo-wrap::after { display: none; }
+  .hero-photo-wrap img { border-radius: 20px; }
+  .hero-badge { bottom: -12px; border-radius: 14px; }
+  .hero-btns { grid-template-columns: 1fr; }
+  .btn-primary, .btn-secondary,
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary {
+    padding: 14px 22px; font-size: 12px;
+    max-width: 220px; width: 100%;
+    margin: 0 auto; display: block; box-sizing: border-box;
+    line-height: 1.3; white-space: normal;
+    letter-spacing: 0.05em;
+    text-align: center;
+    font-weight: 400;
+  }
+  .hero-btns .btn-primary {
+    padding: 21px 33px; font-size: 15px;
+    max-width: 330px;
+  }
+  .hero-btns { margin-left: 0; }
+  .hero-btns { width: 100%; max-width: 100%; display: flex; justify-content: center; }
+  .hero-badge { padding: 12px 10px; gap: 10px; }
+  .badge-num { font-size: 24px; }
+  .badge-label { font-size: 12.5px; letter-spacing: 0.05em; margin-top: 3px; }
+  .ap-num { display: none; }
+  .ap-card {
+    padding: 14px 16px;
+    text-align: center;
+    position: relative;
+  }
+  .ap-title { font-size: 23px; font-weight: 600; margin-bottom: 6px; }
+  .ap-desc { font-size: 18px; line-height: 1.5; }
+  .about-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .about-glyph { display: none; }
+  .about-quote-box { position: static; margin-top: 16px; max-width: 100%; }
+  .req-carousel { padding: 0 36px; }
+  .req-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  .req-grid::-webkit-scrollbar { display: none; }
+  .req-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    min-width: 0;
+  }
+  .req-desc {
+    text-align: center;
+    text-align-last: center;
+    word-spacing: normal;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+  .req-nav {
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 52px; height: 52px;
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    z-index: 3;
+    filter:
+      drop-shadow(0 0 2px rgba(0, 0, 0, 0.55))
+      drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+    transition: transform 0.2s, filter 0.2s;
+  }
+  .req-nav svg { width: 44px; height: 44px; display: block; stroke: #FFFFFF; }
+  .req-nav:hover {
+    transform: translateY(-50%) scale(1.08);
+    filter:
+      drop-shadow(0 0 3px rgba(0, 0, 0, 0.7))
+      drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+  }
+  .req-nav-prev { left: -4px; }
+  .req-nav-next { right: -4px; }
+  .req-card { padding: 32px 28px; border-radius: 16px; }
+  .req-title { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
+  .req-desc { font-size: 22px; line-height: 1.5; }
+  .approach-grid { display: none !important; }
+  .approach-orbit {
+    display: block;
+    width: 340px; height: 340px;
+    margin: 10px auto 0;
+  }
+  .orbit-core {
+    width: 120px; height: 120px;
+    font-size: 22px;
+    padding: 14px;
+  }
+  .planet { width: 86px; height: 86px; }
+  .planet-top    { top: 0;    left: calc(50% - 43px); }
+  .planet-right  { right: 0;  top: calc(50% - 43px); }
+  .planet-bottom { bottom: 0; left: calc(50% - 43px); }
+  .planet-left   { left: 0;   top: calc(50% - 43px); }
+  .planet-inner {
+    font-size: 15px;
+    gap: 4px;
+    padding: 6px;
+  }
+  .planet-icon { width: 30px; height: 30px; }
+  .approach-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+    max-width: 360px;
+    margin: 28px auto 0;
+  }
+  .approach-legend-item strong { font-size: 16px; margin-bottom: 2px; }
+  .approach-legend-item p { font-size: 13px; line-height: 1.4; }
+  .ap-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+    border: none !important;
+    text-align: center;
+  }
+  .ap-num { display: none !important; }
+  .ap-card:nth-child(1) { background: #E85A4F !important; }
+  .ap-card:nth-child(2) { background: #8E8D8A !important; }
+  .ap-card:nth-child(3) { background: #D8C3A5 !important; }
+  .ap-card:nth-child(4) { background: #E98074 !important; }
+  .ap-card:nth-child(1) .ap-title,
+  .ap-card:nth-child(2) .ap-title,
+  .ap-card:nth-child(4) .ap-title { color: var(--white) !important; }
+  .ap-card:nth-child(3) .ap-title { color: var(--text) !important; }
+  .ap-card:nth-child(1) .ap-desc,
+  .ap-card:nth-child(2) .ap-desc,
+  .ap-card:nth-child(4) .ap-desc { color: rgba(255,255,255,0.92) !important; }
+  .ap-card:nth-child(3) .ap-desc { color: var(--text-mid) !important; }
+  .approach-grid::before,
+  .approach-grid::after,
+  .approach-arrow-v { font-size: 22px; }
+  .ap-card:hover { transform: none; }
+  .about-quote-box {
+    position: relative;
+    margin: -58px 24px 0;
+    max-width: none;
+    padding: 22px 20px;
+    font-size: 21px;
+    line-height: 1.55;
+    text-align: center;
+    background: rgba(216, 195, 165, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.35);
+    z-index: 2;
+  }
+  .how-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px 24px; }
+  .svc-list { grid-template-columns: 1fr; gap: 16px; }
+  .svc-item { padding: 28px 24px; }
+  .svc-name { font-size: 26px; }
+  .price-main { font-size: 30px; }
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div>
+    <a href="#" class="nav-logo">Алина <span>Генри</span></a>
+  </div>
+  <div class="nav-burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<ul class="nav-links" id="navLinks">
+  <li><a href="#" onclick="navScroll(event, 'services')">Услуги</a></li>
+  <li><a href="#" onclick="navScroll(event, 'about')">Обо мне</a></li>
+  <li><a href="#" onclick="navScroll(event, 'reviews')">Отзывы</a></li>
+  <li><a href="#" class="nav-articles" onclick="navScroll(event, 'articles')">Статьи</a></li>
+  <li><a href="#" onclick="navScroll(event, 'contact')">Контакты</a></li>
+  <li><a href="#" class="nav-cta" onclick="closeMenu(); openBookingModal(); return false;">Записаться</a></li>
+  <li class="nav-tg-item">
+    <a href="https://t.me/alina_henry" target="_blank" onclick="closeMenu()">
+      <svg class="nav-tg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      @alina_henry
+    </a>
+  </li>
+</ul>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <svg class="hero-glyph" viewBox="0 0 500 500" fill="none" stroke-width="0.7">
+      <!-- STATIC: axes, spires, arcs -->
+      <line x1="250" y1="15" x2="250" y2="485" stroke="#1A1A18" opacity="0.2" stroke-width="0.4"/>
+      <line x1="20" y1="250" x2="480" y2="250" stroke="#1A1A18" opacity="0.12" stroke-width="0.3"/>
+      <line x1="75" y1="75" x2="425" y2="425" stroke="#1A1A18" opacity="0.08" stroke-width="0.3"/>
+      <line x1="425" y1="75" x2="75" y2="425" stroke="#1A1A18" opacity="0.08" stroke-width="0.3"/>
+      <!-- spires top -->
+      <line x1="250" y1="-10" x2="250" y2="15" stroke="#1A1A18" opacity="0.7" stroke-width="1.8"/>
+      <line x1="244" y1="-5" x2="242" y2="40" stroke="#1A1A18" opacity="0.5" stroke-width="1.2"/>
+      <line x1="256" y1="-5" x2="258" y2="40" stroke="#1A1A18" opacity="0.5" stroke-width="1.2"/>
+      <line x1="237" y1="0" x2="234" y2="55" stroke="#1A1A18" opacity="0.3" stroke-width="2"/>
+      <line x1="263" y1="0" x2="266" y2="55" stroke="#1A1A18" opacity="0.3" stroke-width="2"/>
+      <line x1="230" y1="5" x2="226" y2="35" stroke="#E98074" opacity="0.35" stroke-width="1.5"/>
+      <line x1="270" y1="5" x2="274" y2="35" stroke="#E98074" opacity="0.35" stroke-width="1.5"/>
+      <!-- spires bottom -->
+      <line x1="250" y1="485" x2="250" y2="510" stroke="#1A1A18" opacity="0.4" stroke-width="1"/>
+      <line x1="244" y1="480" x2="243" y2="505" stroke="#1A1A18" opacity="0.25" stroke-width="0.8"/>
+      <line x1="256" y1="480" x2="257" y2="505" stroke="#1A1A18" opacity="0.25" stroke-width="0.8"/>
+      <!-- arcs -->
+      <path d="M 195 22 A 220 220 0 0 1 305 22" stroke="#1A1A18" opacity="0.4" stroke-width="0.6"/>
+      <path d="M 185 32 A 210 210 0 0 1 315 32" stroke="#E98074" opacity="0.3" stroke-width="0.5"/>
+      <path d="M 175 45 A 195 195 0 0 1 325 45" stroke="#1A1A18" opacity="0.15" stroke-width="0.4"/>
+      <path d="M 195 478 A 220 220 0 0 0 305 478" stroke="#1A1A18" opacity="0.2" stroke-width="0.5"/>
+      <!-- core (pulsing) -->
+      <g class="glyph-core">
+        <circle cx="250" cy="250" r="6" fill="#E98074" stroke="none" opacity="0.6"/>
+        <circle cx="250" cy="250" r="2" fill="#1A1A18" stroke="none" opacity="0.7"/>
+      </g>
+      <!-- static inner rings -->
+      <circle cx="250" cy="250" r="20" stroke="#1A1A18" opacity="0.5" stroke-width="0.5"/>
+      <circle cx="250" cy="250" r="50" stroke="#1A1A18" opacity="0.4"/>
+
+      <!-- ORBIT 1: outer ring + planets (slow clockwise) -->
+      <g class="glyph-orbit-1">
+        <circle cx="250" cy="250" r="235" stroke="#1A1A18" opacity="0.5"/>
+        <circle cx="250" cy="250" r="235" stroke="#1A1A18" stroke-dasharray="1.5 5" opacity="0.3"/>
+        <circle cx="250" cy="15" r="7" stroke="#1A1A18" opacity="0.5" stroke-width="0.5"/>
+        <circle cx="250" cy="15" r="3" fill="#E98074" stroke="none" opacity="0.7"/>
+        <circle cx="435" cy="250" r="5" stroke="#1A1A18" opacity="0.4"/>
+        <circle cx="435" cy="250" r="2" fill="#1A1A18" stroke="none" opacity="0.5"/>
+        <circle cx="250" cy="435" r="8" stroke="#E98074" opacity="0.45" stroke-width="0.6"/>
+        <circle cx="250" cy="435" r="3" fill="#1A1A18" stroke="none" opacity="0.5"/>
+        <circle cx="65" cy="250" r="4" stroke="#1A1A18" opacity="0.35"/>
+        <circle cx="65" cy="250" r="1.5" fill="#E98074" stroke="none" opacity="0.5"/>
+      </g>
+
+      <!-- ORBIT 2: middle ring (reverse) -->
+      <g class="glyph-orbit-2">
+        <circle cx="250" cy="250" r="185" stroke="#1A1A18" opacity="0.45"/>
+        <circle cx="250" cy="250" r="185" stroke-dasharray="1 8" stroke="#E98074" opacity="0.4"/>
+        <path d="M 468 185 A 220 220 0 0 1 468 315" stroke="#1A1A18" opacity="0.2" stroke-width="0.5"/>
+        <path d="M 32 185 A 220 220 0 0 0 32 315" stroke="#E98074" opacity="0.15" stroke-width="0.4"/>
+      </g>
+
+      <!-- ORBIT 3: inner ring (faster) -->
+      <g class="glyph-orbit-3">
+        <circle cx="250" cy="250" r="135" stroke="#1A1A18" opacity="0.5"/>
+        <circle cx="250" cy="250" r="90" stroke="#E98074" opacity="0.45" stroke-width="0.6"/>
+        <circle cx="280" cy="215" r="4" stroke="#E98074" opacity="0.3" stroke-width="0.4"/>
+        <circle cx="280" cy="215" r="1.2" fill="#1A1A18" stroke="none" opacity="0.5"/>
+      </g>
+
+      <!-- MOON 1: upper-right (own orbit speed) -->
+      <g class="glyph-moon-1">
+        <circle cx="345" cy="100" r="18" stroke="#1A1A18" opacity="0.2" stroke-width="0.4"/>
+        <circle cx="345" cy="100" r="7" stroke="#E98074" opacity="0.4" stroke-width="0.5"/>
+        <circle cx="345" cy="100" r="2.5" fill="#E98074" stroke="none" opacity="0.6"/>
+        <circle cx="360" cy="88" r="1.5" fill="#1A1A18" stroke="none" opacity="0.4"/>
+        <line x1="250" y1="200" x2="345" y2="100" stroke="#1A1A18" opacity="0.15" stroke-width="0.3"/>
+      </g>
+
+      <!-- MOON 2: lower-left (reverse) -->
+      <g class="glyph-moon-2">
+        <circle cx="140" cy="385" r="14" stroke="#1A1A18" opacity="0.2" stroke-width="0.4"/>
+        <circle cx="140" cy="385" r="5" stroke="#1A1A18" opacity="0.35"/>
+        <circle cx="140" cy="385" r="2" fill="#E98074" stroke="none" opacity="0.5"/>
+        <line x1="250" y1="300" x2="140" y2="385" stroke="#1A1A18" opacity="0.12" stroke-width="0.3"/>
+      </g>
+
+      <!-- MOON 3: fast small satellite -->
+      <g class="glyph-moon-3">
+        <circle cx="310" cy="160" r="3" stroke="#E98074" opacity="0.35" stroke-width="0.4"/>
+        <circle cx="310" cy="160" r="1" fill="#1A1A18" stroke="none" opacity="0.5"/>
+        <line x1="250" y1="160" x2="250" y2="70" stroke="#E98074" opacity="0.2" stroke-width="0.5"/>
+      </g>
+
+      <!-- DOTS GROUP 1 (slow drift) -->
+      <g class="glyph-dots-1">
+        <circle cx="180" cy="105" r="1.3" fill="#1A1A18" stroke="none" opacity="0.4"/>
+        <circle cx="155" cy="135" r="0.8" fill="#E98074" stroke="none" opacity="0.5"/>
+        <circle cx="340" cy="175" r="1" fill="#1A1A18" stroke="none" opacity="0.35"/>
+        <circle cx="360" cy="200" r="0.7" fill="#E98074" stroke="none" opacity="0.4"/>
+        <circle cx="110" cy="140" r="0.8" fill="#1A1A18" stroke="none" opacity="0.4"/>
+        <circle cx="330" cy="55" r="0.9" fill="#E98074" stroke="none" opacity="0.4"/>
+        <circle cx="290" cy="140" r="0.6" fill="#E98074" stroke="none" opacity="0.35"/>
+        <circle cx="220" cy="165" r="0.5" fill="#1A1A18" stroke="none" opacity="0.4"/>
+      </g>
+
+      <!-- DOTS GROUP 2 (reverse drift) -->
+      <g class="glyph-dots-2">
+        <circle cx="145" cy="300" r="1.5" fill="#1A1A18" stroke="none" opacity="0.3"/>
+        <circle cx="370" cy="320" r="1" fill="#1A1A18" stroke="none" opacity="0.3"/>
+        <circle cx="310" cy="400" r="1.2" fill="#E98074" stroke="none" opacity="0.3"/>
+        <circle cx="395" cy="145" r="0.8" fill="#1A1A18" stroke="none" opacity="0.3"/>
+        <circle cx="200" cy="425" r="1" fill="#1A1A18" stroke="none" opacity="0.25"/>
+        <circle cx="165" cy="55" r="1" fill="#1A1A18" stroke="none" opacity="0.3"/>
+        <circle cx="210" cy="360" r="0.9" fill="#1A1A18" stroke="none" opacity="0.25"/>
+        <circle cx="120" cy="210" r="0.7" fill="#E98074" stroke="none" opacity="0.3"/>
+        <circle cx="380" cy="280" r="0.8" fill="#1A1A18" stroke="none" opacity="0.3"/>
+        <circle cx="275" cy="340" r="0.6" fill="#E98074" stroke="none" opacity="0.3"/>
+      </g>
+    </svg>
+    <h1 class="hero-title">
+      Помогаю стать<br>
+      <em>живым и свободным</em>
+    </h1>
+    <p class="hero-sub-small">Процессуальный психотерапевт в интегральном подходе</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary" onclick="openBookingModal(); return false;">Записаться на консультацию</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="alina-hero-blurred.jpg" alt="Алина Генри — интегральный психотерапевт">
+      <div class="hero-badge">
+        <div class="badge-item">
+          <span class="badge-num">8+</span>
+          <span class="badge-label">лет практики</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-num">400+</span>
+          <span class="badge-label">клиентов</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-num">1000+</span>
+          <span class="badge-label">часов личной терапии и супервизии</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUESTS -->
+<section class="requests section fade-up" id="requests">
+  <p class="s-tag rose">С чем ко мне приходят</p>
+  <div class="req-carousel">
+  <button type="button" class="req-nav req-nav-prev" onclick="reqScroll(-1)" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"/></svg></button>
+  <button type="button" class="req-nav req-nav-next" onclick="reqScroll(1)" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+  <div class="req-grid" id="reqGrid">
+    <div class="req-card">
+      <p class="req-title">Тревога и стресс</p>
+      <p class="req-desc">Внутри постоянный фон напряжения — и непонятно откуда он. Сложно расслабиться даже когда всё вроде бы в порядке.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Выгорание</p>
+      <p class="req-desc">Нет сил, нет интереса, нет себя. Снаружи всё нормально — но внутри пустота и ощущение что ты функция, а не человек.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Кризис смыслов</p>
+      <p class="req-desc">Всё есть — работа, отношения, стабильность. Но ощущение «не так» или «и что дальше» никуда не уходит.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Отношения</p>
+      <p class="req-desc">В паре или с собой — один и тот же повторяющийся круг. Непонимание, дистанция, невозможность договориться.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Проблемы миграции</p>
+      <p class="req-desc">Переезд, адаптация, потеря опоры и привычного окружения. Растерянность, одиночество, поиск себя в новом контексте.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Травматические события</p>
+      <p class="req-desc">Потери, насилие, тяжёлые жизненные ситуации, которые всё ещё отзываются. Помогаю прожить и интегрировать опыт.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Секс и близость</p>
+      <p class="req-desc">Снижение сексуального желания, страх близости, сексуальные блоки, трудности контакта с партнёром.</p>
+    </div>
+    <div class="req-card">
+      <p class="req-title">Проблемы с чувствительностью</p>
+      <p class="req-desc">Всё есть — но ничего не чувствую. Ни удовлетворения, ни отклика на происходящее. Или наоборот — эмоции захлёстывают, перепады слишком сильные, не получается удержать.</p>
+    </div>
+    <div class="req-card req-card--more">
+      <p class="req-title">Не нашёл свой запрос?</p>
+      <p class="req-desc">Если не знаешь, как сформулировать — всё равно напиши, разберёмся вместе.</p>
+      <button type="button" class="req-cta" onclick="openBookingModal()">Записаться</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section fade-up" id="services">
+  <p class="s-tag rose">Услуги</p>
+  <div class="svc-list">
+
+    <div class="svc-item">
+      <div class="svc-body">
+        <p class="svc-name">Индивидуальная терапия</p>
+        <p class="svc-desc">Работаем с тем, что происходит именно с тобой — без шаблонов. Смотрю на все уровни сразу и помогаю найти, откуда это растёт.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Тревога</span>
+          <span class="svc-tag">Выгорание</span>
+          <span class="svc-tag">Кризис смыслов</span>
+          <span class="svc-tag">Отношения</span>
+          <span class="svc-tag">Потери</span>
+        </div>
+        <div class="svc-steps">
+          <div class="svc-step"><span class="svc-step-n">1 →</span>Пишешь в Телеграм, обсуждаем запрос и удобное время</div>
+          <div class="svc-step"><span class="svc-step-n">2 →</span>Проводим встречу онлайн по видеосвязи, знакомимся и формулируем цели</div>
+          <div class="svc-step"><span class="svc-step-n">3 →</span>Договариваемся о ритме встреч — обычно раз в неделю</div>
+        </div>
+        <div class="svc-packages">
+          <div class="svc-pkg">
+            <div class="svc-pkg-name">Разовая сессия</div>
+            <div class="svc-pkg-price">5 000 ₽</div>
+          </div>
+          <div class="svc-pkg">
+            <div class="svc-pkg-name">Пакет 5 сессий<span class="svc-pkg-save">экономия 2 500 ₽</span></div>
+            <div class="svc-pkg-price">22 500 ₽</div>
+          </div>
+          <div class="svc-pkg featured">
+            <div class="svc-pkg-name">Пакет 10 сессий<span class="svc-pkg-save">популярный выбор · экономия 8 000 ₽</span></div>
+            <div class="svc-pkg-price">42 000 ₽</div>
+          </div>
+        </div>
+        <p class="svc-pkg-hint">60–80 минут · онлайн</p>
+      </div>
+      <div class="svc-footer">
+        <button type="button" class="btn-svc" onclick="openBookingModal()" style="margin: 0 auto;">Записаться</button>
+      </div>
+    </div>
+
+    <div class="svc-item featured">
+      <span class="svc-badge">Рекомендую начать с этого</span>
+      <div class="svc-body">
+        <p class="svc-name">Диагностическая сессия</p>
+        <p class="svc-desc">Если хочешь понять, что вообще происходит — и получить чёткую карту, а не просто поговорить. Составляю персональный план по всем линиям развития с рекомендациями и литературой.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Самопонимание</span>
+          <span class="svc-tag">Карта развития</span>
+          <span class="svc-tag">План действий</span>
+        </div>
+        <div class="svc-steps">
+          <div class="svc-step"><span class="svc-step-n">1 →</span>Проводим встречу онлайн по видеосвязи 90 минут — разбираем твою ситуацию по всем линиям развития</div>
+          <div class="svc-step"><span class="svc-step-n">2 →</span>Составляю карту — диагностика, план действий, литература</div>
+          <div class="svc-step"><span class="svc-step-n">3 →</span>Через неделю разбираем карту вместе ~40 минут, отвечаю на вопросы</div>
+        </div>
+      </div>
+      <div class="svc-footer">
+        <div class="svc-price">
+          <span class="price-main">6 000 ₽</span>
+          <span class="price-note">единоразовый формат</span>
+        </div>
+        <button type="button" class="btn-svc" onclick="openBookingModal()">Записаться</button>
+      </div>
+    </div>
+
+    <div class="svc-item">
+      <div class="svc-body">
+        <p class="svc-name">Психотерапия пар</p>
+        <p class="svc-desc">Когда разговоры идут по кругу и вы не понимаете друг друга. Помогаю найти язык, на котором оба можете говорить и понимать потребности.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Кризис в паре</span>
+          <span class="svc-tag">Конфликты</span>
+          <span class="svc-tag">Коммуникация</span>
+          <span class="svc-tag">Потребности</span>
+        </div>
+        <div class="svc-steps">
+          <div class="svc-step"><span class="svc-step-n">1 →</span>Пишете вдвоём, я высылаю анкету для первой встречи</div>
+          <div class="svc-step"><span class="svc-step-n">2 →</span>Проводим встречу втроём онлайн по видеосвязи на 1,5–2 часа, разбираем ситуацию</div>
+          <div class="svc-step"><span class="svc-step-n">3 →</span>Выстраиваем план работы под вашу пару</div>
+        </div>
+      </div>
+      <div class="svc-footer">
+        <div class="svc-price">
+          <span class="price-main">7 000 ₽</span>
+          <span class="price-note">1,5–2 часа · онлайн</span>
+        </div>
+        <button type="button" class="btn-svc" onclick="openBookingModal()">Записаться</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach section fade-up" id="approach">
+  <p class="s-tag rose">Мой подход</p>
+  <div class="approach-intro">
+    <p>В работе я использую максимальное количество рабочих инструментов: расстановки, гештальт, КПТ, коучинг, процессуальную терапию, эмоционально-образную терапию, проективные методики и другие. Это важно, потому что под каждый запрос нужны свои инструменты — универсального решения не существует.</p>
+    <p>Я смотрю на человека как на многомерную систему, на которую влияют социум и среда, социальное положение, здоровье, ценности и мировоззрение, увлечения, круг общения — всё это имеет значение и всё учитывается в работе.</p>
+    <p>Исходя из этого я выстраиваю процесс индивидуально под каждого человека.</p>
+  </div>
+  <h2 class="s-title">Смотрю на четыре уровня сразу</h2>
+
+  <div class="approach-orbit" aria-hidden="true">
+    <svg class="approach-orbit-glyph" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+      <!-- axes -->
+      <line x1="250" y1="60" x2="250" y2="440" stroke="#1A1A18" opacity="0.12" stroke-width="0.4"/>
+      <line x1="60" y1="250" x2="440" y2="250" stroke="#1A1A18" opacity="0.1" stroke-width="0.3"/>
+      <!-- rings -->
+      <circle cx="250" cy="250" r="190" stroke="#1A1A18" opacity="0.4" stroke-width="0.7"/>
+      <circle cx="250" cy="250" r="190" stroke-dasharray="1.5 5" stroke="#E98074" opacity="0.5" stroke-width="0.7"/>
+      <circle cx="250" cy="250" r="140" stroke="#1A1A18" opacity="0.3" stroke-width="0.6"/>
+      <circle cx="250" cy="250" r="140" stroke-dasharray="1 8" stroke="#E85A4F" opacity="0.4" stroke-width="0.6"/>
+      <circle cx="250" cy="250" r="100" stroke="#1A1A18" opacity="0.25" stroke-width="0.5"/>
+      <!-- dots scattered -->
+      <g class="glyph-dots-1">
+        <circle cx="180" cy="105" r="1.3" fill="#1A1A18" opacity="0.35"/>
+        <circle cx="340" cy="175" r="1" fill="#1A1A18" opacity="0.3"/>
+        <circle cx="360" cy="200" r="0.7" fill="#E98074" opacity="0.4"/>
+        <circle cx="110" cy="140" r="0.8" fill="#1A1A18" opacity="0.35"/>
+        <circle cx="330" cy="55" r="0.9" fill="#E98074" opacity="0.4"/>
+      </g>
+      <g class="glyph-dots-2">
+        <circle cx="145" cy="300" r="1.5" fill="#1A1A18" opacity="0.28"/>
+        <circle cx="370" cy="320" r="1" fill="#1A1A18" opacity="0.28"/>
+        <circle cx="310" cy="400" r="1.2" fill="#E98074" opacity="0.3"/>
+        <circle cx="200" cy="425" r="1" fill="#1A1A18" opacity="0.25"/>
+        <circle cx="165" cy="55" r="1" fill="#1A1A18" opacity="0.3"/>
+      </g>
+    </svg>
+    <div class="orbit-core">
+      <span>Человек</span>
+    </div>
+    <div class="orbit-spin">
+      <div class="planet planet-top">
+        <div class="planet-inner">
+          <svg class="planet-icon" viewBox="0 0 48 48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <!-- head -->
+            <circle cx="24" cy="8" r="3.5"/>
+            <!-- torso -->
+            <line x1="24" y1="12" x2="24" y2="28"/>
+            <!-- left arm out -->
+            <line x1="24" y1="17" x2="12" y2="20"/>
+            <!-- right arm out -->
+            <line x1="24" y1="17" x2="36" y2="20"/>
+            <!-- legs spread -->
+            <line x1="24" y1="28" x2="16" y2="42"/>
+            <line x1="24" y1="28" x2="32" y2="42"/>
+          </svg>
+          <span>Тело</span>
+        </div>
+      </div>
+      <div class="planet planet-right">
+        <div class="planet-inner">
+          <svg class="planet-icon" viewBox="0 0 48 48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <!-- head (round) -->
+            <circle cx="16" cy="26" r="9"/>
+            <!-- neck/shoulders hint -->
+            <path d="M11 34 L11 38 M21 34 L21 38"/>
+            <!-- thought bubbles rising up-right -->
+            <circle cx="28" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="32" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+            <!-- light bulb with rays (the idea) -->
+            <circle cx="38" cy="8" r="3.2"/>
+            <line x1="36" y1="11" x2="40" y2="11"/>
+            <line x1="37" y1="13" x2="39" y2="13"/>
+            <!-- rays around bulb -->
+            <line x1="38" y1="2" x2="38" y2="4"/>
+            <line x1="44" y1="8" x2="46" y2="8"/>
+            <line x1="42.5" y1="3.5" x2="44" y2="2"/>
+            <line x1="33.5" y1="3.5" x2="32" y2="2"/>
+            <line x1="42.5" y1="12.5" x2="44" y2="14"/>
+          </svg>
+          <span>Психика</span>
+        </div>
+      </div>
+      <div class="planet planet-bottom">
+        <div class="planet-inner">
+          <svg class="planet-icon" viewBox="0 0 48 48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="10" cy="16" r="3"/>
+            <path d="M5 32 V25 Q5 21 10 21 Q15 21 15 25 V32"/>
+            <circle cx="24" cy="13" r="3.5"/>
+            <path d="M18 34 V23 Q18 18 24 18 Q30 18 30 23 V34"/>
+            <circle cx="38" cy="16" r="3"/>
+            <path d="M33 32 V25 Q33 21 38 21 Q43 21 43 25 V32"/>
+          </svg>
+          <span>Отношения</span>
+        </div>
+      </div>
+      <div class="planet planet-left">
+        <div class="planet-inner">
+          <svg class="planet-icon" viewBox="0 0 48 48" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="24" cy="24" r="18" stroke-dasharray="2 3" opacity="0.7"/>
+            <circle cx="24" cy="19" r="3"/>
+            <path d="M19 32 V26 Q19 23 24 23 Q29 23 29 26 V32"/>
+            <circle cx="10" cy="10" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="38" cy="10" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="38" cy="38" r="1.2" fill="currentColor" stroke="none"/>
+            <circle cx="10" cy="38" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Окружение</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="approach-legend" aria-hidden="false">
+    <div class="approach-legend-item"><p><strong>Тело</strong>Нервная система, физическое состояние, как оно влияет на психику.</p></div>
+    <div class="approach-legend-item"><p><strong>Психика</strong>Убеждения, эмоции, паттерны, травматический опыт.</p></div>
+    <div class="approach-legend-item"><p><strong>Отношения</strong>Контакт с другими, границы, где теряешь себя.</p></div>
+    <div class="approach-legend-item"><p><strong>Окружение</strong>Учёт всех обстоятельств, в которых ты находишься на данный момент.</p></div>
+  </div>
+
+  <div class="approach-grid">
+    <div class="ap-card">
+      <span class="ap-num">I</span>
+      <p class="ap-title">Тело</p>
+      <p class="ap-desc">Как живёт твоя нервная система, что говорит тело, как физическое состояние влияет на психику.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">II</span>
+      <p class="ap-title">Психика</p>
+      <p class="ap-desc">Убеждения, паттерны, эмоции, травматический опыт — всё, что формирует твои реакции изнутри.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">III</span>
+      <p class="ap-title">Отношения</p>
+      <p class="ap-desc">Как ты строишь контакт с другими, где теряешь себя, где нарушаются границы и почему.</p>
+    </div>
+    <div class="ap-card">
+      <span class="ap-num">IV</span>
+      <p class="ap-title">Окружение</p>
+      <p class="ap-desc">Учёт всех обстоятельств, в которых ты находишься на данный момент — среда, социум, контекст жизни.</p>
+    </div>
+    <div class="approach-arrow-v approach-arrow-left">↕</div>
+    <div class="approach-arrow-v approach-arrow-right">↕</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section fade-up" id="about">
+  <svg class="about-glyph" viewBox="0 0 500 500" fill="none" stroke-width="0.7" aria-hidden="true">
+    <!-- STATIC: axes, inner rings -->
+    <line x1="250" y1="15" x2="250" y2="485" stroke="#1A1A18" opacity="0.18" stroke-width="0.4"/>
+    <line x1="20" y1="250" x2="480" y2="250" stroke="#1A1A18" opacity="0.1" stroke-width="0.3"/>
+    <line x1="75" y1="75" x2="425" y2="425" stroke="#1A1A18" opacity="0.07" stroke-width="0.3"/>
+    <line x1="425" y1="75" x2="75" y2="425" stroke="#1A1A18" opacity="0.07" stroke-width="0.3"/>
+    <circle cx="250" cy="250" r="20" stroke="#1A1A18" opacity="0.45" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="50" stroke="#1A1A18" opacity="0.35" stroke-width="0.7"/>
+    <!-- upper arcs -->
+    <path d="M 195 22 A 220 220 0 0 1 305 22" stroke="#1A1A18" opacity="0.3" stroke-width="0.5"/>
+    <path d="M 185 32 A 210 210 0 0 1 315 32" stroke="#E98074" opacity="0.25" stroke-width="0.5"/>
+
+    <!-- PULSING CORE -->
+    <g class="glyph-core">
+      <circle cx="250" cy="250" r="6" fill="#E98074" opacity="0.55"/>
+      <circle cx="250" cy="250" r="2" fill="#1A1A18" opacity="0.65"/>
+    </g>
+
+    <!-- ORBIT 1: outer ring + planets (slow clockwise) -->
+    <g class="glyph-orbit-1">
+      <circle cx="250" cy="250" r="235" stroke="#1A1A18" opacity="0.5" stroke-width="0.7"/>
+      <circle cx="250" cy="250" r="235" stroke="#1A1A18" stroke-dasharray="1.5 5" opacity="0.3" stroke-width="0.7"/>
+      <circle cx="250" cy="15" r="7" stroke="#1A1A18" opacity="0.5" stroke-width="0.5"/>
+      <circle cx="250" cy="15" r="3" fill="#E98074" opacity="0.75"/>
+      <circle cx="435" cy="250" r="5" stroke="#1A1A18" opacity="0.4" stroke-width="0.5"/>
+      <circle cx="435" cy="250" r="2" fill="#1A1A18" opacity="0.55"/>
+      <circle cx="250" cy="435" r="8" stroke="#E98074" opacity="0.5" stroke-width="0.6"/>
+      <circle cx="250" cy="435" r="3" fill="#1A1A18" opacity="0.5"/>
+      <circle cx="65" cy="250" r="4" stroke="#1A1A18" opacity="0.35" stroke-width="0.5"/>
+      <circle cx="65" cy="250" r="1.5" fill="#E98074" opacity="0.55"/>
+    </g>
+
+    <!-- ORBIT 2: middle ring (reverse) -->
+    <g class="glyph-orbit-2">
+      <circle cx="250" cy="250" r="185" stroke="#1A1A18" opacity="0.45" stroke-width="0.7"/>
+      <circle cx="250" cy="250" r="185" stroke-dasharray="1 8" stroke="#E98074" opacity="0.4" stroke-width="0.7"/>
+      <circle cx="435" cy="250" r="3" stroke="#1A1A18" opacity="0.35" stroke-width="0.5"/>
+      <circle cx="65" cy="250" r="2.5" fill="#E98074" opacity="0.5"/>
+    </g>
+
+    <!-- ORBIT 3: inner ring (faster) -->
+    <g class="glyph-orbit-3">
+      <circle cx="250" cy="250" r="135" stroke="#1A1A18" opacity="0.45" stroke-width="0.7"/>
+      <circle cx="250" cy="250" r="90" stroke="#E98074" opacity="0.4" stroke-width="0.6"/>
+      <circle cx="280" cy="215" r="4" stroke="#E98074" opacity="0.35" stroke-width="0.4"/>
+      <circle cx="280" cy="215" r="1.2" fill="#1A1A18" opacity="0.5"/>
+    </g>
+
+    <!-- MOON 1: upper-right -->
+    <g class="glyph-moon-1">
+      <circle cx="345" cy="100" r="18" stroke="#1A1A18" opacity="0.2" stroke-width="0.4"/>
+      <circle cx="345" cy="100" r="7" stroke="#E98074" opacity="0.4" stroke-width="0.5"/>
+      <circle cx="345" cy="100" r="2.5" fill="#E98074" opacity="0.6"/>
+    </g>
+
+    <!-- MOON 2: lower-left (reverse) -->
+    <g class="glyph-moon-2">
+      <circle cx="140" cy="385" r="14" stroke="#1A1A18" opacity="0.2" stroke-width="0.4"/>
+      <circle cx="140" cy="385" r="5" stroke="#1A1A18" opacity="0.35"/>
+      <circle cx="140" cy="385" r="2" fill="#E98074" opacity="0.5"/>
+    </g>
+
+    <!-- MOON 3: fast small satellite -->
+    <g class="glyph-moon-3">
+      <circle cx="310" cy="160" r="3" stroke="#E98074" opacity="0.35" stroke-width="0.4"/>
+      <circle cx="310" cy="160" r="1" fill="#1A1A18" opacity="0.5"/>
+    </g>
+
+    <!-- DOTS GROUP 1 (slow drift) -->
+    <g class="glyph-dots-1">
+      <circle cx="180" cy="105" r="1.3" fill="#1A1A18" opacity="0.4"/>
+      <circle cx="155" cy="135" r="0.8" fill="#E98074" opacity="0.5"/>
+      <circle cx="340" cy="175" r="1" fill="#1A1A18" opacity="0.35"/>
+      <circle cx="360" cy="200" r="0.7" fill="#E98074" opacity="0.4"/>
+      <circle cx="110" cy="140" r="0.8" fill="#1A1A18" opacity="0.4"/>
+      <circle cx="290" cy="140" r="0.6" fill="#E98074" opacity="0.35"/>
+    </g>
+
+    <!-- DOTS GROUP 2 (reverse drift) -->
+    <g class="glyph-dots-2">
+      <circle cx="145" cy="300" r="1.5" fill="#1A1A18" opacity="0.3"/>
+      <circle cx="370" cy="320" r="1" fill="#1A1A18" opacity="0.3"/>
+      <circle cx="310" cy="400" r="1.2" fill="#E98074" opacity="0.3"/>
+      <circle cx="395" cy="145" r="0.8" fill="#1A1A18" opacity="0.3"/>
+      <circle cx="200" cy="425" r="1" fill="#1A1A18" opacity="0.25"/>
+      <circle cx="120" cy="210" r="0.7" fill="#E98074" opacity="0.3"/>
+    </g>
+  </svg>
+  <div class="about-wrap">
+    <div class="about-photo-wrap">
+      <img src="alina-about.jpg" alt="Алина Генри">
+    </div>
+    <div class="about-text">
+      <p class="s-tag rose">Обо мне</p>
+      <p>В эту профессию я пришла через собственную терапию. Она изменила меня настолько, что я захотела помогать другим проходить этот путь. За годы практики пришла к тому, что хорошо осознаю, что со мной происходит, нахожусь в контакте с собой и поступаю не из страха, а из того, что мне действительно важно. Того же хочу и для людей, с которыми работаю.</p>
+      <p>В людях я вижу потенциал, которого они сами в себе ещё не замечают, и помогаю его раскрыть — до той точки, где появляется свобода делать большие самостоятельные шаги.</p>
+      <p>Люблю исследовать и видеть, как всё связано со всем. Ценю юмор, импровизацию и приключения — и, кажется, психотерапия для меня во многом про то же: замечать связи, которые раньше были не видны, и перестать повторять старое просто потому, что по-другому не пробовал.</p>
+      <div class="creds-list">
+        <div class="cred cred-key"><span class="cred-dot r"></span>Более 400 клиентов</div>
+        <div class="cred"><span class="cred-dot r"></span>Высшее психологическое образование — факультет психологии УрФУ</div>
+        <div class="cred"><span class="cred-dot r"></span>Обучение психотерапии во Всероссийской профессиональной психотерапевтической лиге</div>
+        <div class="cred"><span class="cred-dot b"></span>7 психотерапевтических групп</div>
+        <div class="cred cred-key"><span class="cred-dot b"></span>1000+ часов личной терапии и супервизий</div>
+        <div class="cred"><span class="cred-dot r"></span>Обучение по интегральному подходу проф. А.В. Непомнящего</div>
+        <div class="cred"><span class="cred-dot b"></span>Участница международных конференций по трансперсональной психологии</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews section fade-up" id="reviews">
+  <p class="s-tag rose">Отзывы клиентов</p>
+  <p class="reviews-disclaimer"><em>Все отзывы публикуются с разрешения клиентов. Имена и личные данные скрыты — конфиденциальность важнее красивой картинки.</em></p>
+  <div class="reviews-carousel">
+    <button type="button" class="review-nav review-nav-prev" onclick="reviewsScroll(-1)" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"/></svg></button>
+    <button type="button" class="review-nav review-nav-next" onclick="reviewsScroll(1)" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+    <div class="reviews-grid" id="reviewsGrid">
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-1.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-2.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-3.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-4.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-5.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-6.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+      <figure class="review-card">
+        <div class="review-screenshot-wrap">
+          <img loading="lazy" src="review-7.jpg" alt="Отзыв клиента (скриншот, личные данные скрыты)">
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section fade-up" id="faq">
+  <p class="s-tag rose">Вопросы</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>Как я работаю</span>
+      </button>
+      <div class="faq-answer">
+        <p><strong>Первая встреча.</strong> Знакомимся, выстраиваем контакт и план. Помогаю сформулировать запрос, если он не ясен.</p>
+        <p><strong>Индивидуальный подход.</strong> Использую интегральную модель Кена Уилбера, чтобы подобрать персонализированные методы работы. Это позволяет мягко исследовать внутренние состояния, находить опору в себе и развивать навыки саморегуляции.</p>
+        <p><strong>Домашние практики.</strong> Закрепляем результат через практику: домашние задания помогают осознанно интегрировать новые навыки в жизнь.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>Сколько длится терапия</span>
+      </button>
+      <div class="faq-answer">
+        <p>Длительность зависит от запроса. Для краткосрочных задач обычно хватает 5–10 встреч. Глубинная работа с устойчивыми паттернами — от нескольких месяцев до года и больше. На первой встрече обсудим примерный план.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>Как проходят онлайн-сессии</span>
+      </button>
+      <div class="faq-answer">
+        <p>Проводим встречу онлайн по видеосвязи — в удобном для тебя мессенджере. Для сессии нужно тихое пространство, где тебя не будут отвлекать, наушники и стабильный интернет. Длительность индивидуальной сессии — 60–80 минут.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>Можно ли перенести или отменить сессию</span>
+      </button>
+      <div class="faq-answer">
+        <p>Да, перенести сессию можно не позднее чем за 24 часа. Если отмена произошла позже — сессия оплачивается полностью. Это помогает поддерживать стабильность процесса.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>В каких случаях стоит обратиться</span>
+      </button>
+      <div class="faq-answer">
+        <p>Когда внутри возникает ощущение, что что-то «не так» и не получается разобраться самостоятельно. Тревога, выгорание, потеря смыслов, трудности в отношениях, кризисы, адаптация после переезда, проживание травматичного опыта — всё это повод поговорить.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles section fade-up" id="articles">
+  <p class="s-tag rose">Статьи</p>
+  <div class="articles-wrap">
+
+    <article class="article-card" id="article-1">
+      <div class="article-meta">
+        <span>15 апреля 2026</span>
+        <span class="article-dot"></span>
+        <span>12 мин чтения</span>
+      </div>
+      <h2 class="article-title">Выгорание — это не про усталость. Разбор на примере</h2>
+      <p class="article-excerpt">Почему советы про баланс и медитацию не работают, и что реально происходит у человека, который «просто устал». Разбор через четыре квадранта интегрального подхода — на примере выдуманной героини Маши, за которой стоят типичные запросы и паттерны.</p>
+      <button type="button" class="article-readmore" onclick="toggleArticle('article-1')">Читать полностью →</button>
+      <div class="article-full">
+        <p class="article-subtitle">Почему советы про баланс и медитацию не работают, и что реально происходит у человека, который «просто устал».</p>
+        <p>Я решила поразбирать разнонаправленные кейсы по четырём квадрантам интегрального подхода и немного показать, как я обычно работаю с запросами.</p>
+        <p>Я взяла выдуманную героиню, Машу, со среднестатистическим набором фактов. Типичные запросы, жалобы, паттерны — то, с чем приходят люди в выгорании.</p>
+        <p><strong>Нюанс:</strong> Маша пришла с чётким «я выгорела». Но так бывает не всегда. Чаще человек просто чувствует — что-то не так. Усталость, раздражение, пустота. И не может понять почему. Не соотносит своё состояние со всем, что происходит вокруг. Недооценивает. Иногда нужно время, чтобы самому увидеть: да, это оно. Иногда требуется несколько сеансов терапии, чтобы человек был готов это признать.</p>
+        <hr>
+        <h3>Часть 1. Кейс Маши: что скрывается за «я выгорела»</h3>
+        <p>Маша, 32, продакт в IT. Пришла с запросом: «кажется, я выгорела, помогите выбраться из этого состояния».</p>
+        <p>Хронический недосып из-за поверхностного сна, плохое питание «на бегу», раздражение на коллег. Единственный способ расслабиться — лежание с телефоном.</p>
+        <p>Любой коуч скажет: баланс, медитация, делегирование. И будет прав, но частично.</p>
+        <p>Когда мы начали разбираться — картина оказалась другой.</p>
+        <div class="article-quadrant">
+          <div class="quadrant-title">Тело</div>
+          <p>Хронический зажим в плечах и челюсти. Мигрени — с подросткового возраста. Щитовидка на грани нормы. Тело давно сигналило, но клиентка предпочитала пить обезболивающие и тонизироваться кофе.</p>
+        </div>
+        <div class="article-quadrant">
+          <div class="quadrant-title">Семейная история</div>
+          <p>Мама-врач, работала на износ и этим гордилась. Даже не говоря о том, чтобы все вокруг неё жили как она, она показывала пример. «Отдыхать — стыдно». Программа сидела так глубоко, что Маша в отпуске чувствовала вину.</p>
+        </div>
+        <div class="article-quadrant">
+          <div class="quadrant-title">Социальный контекст</div>
+          <p>В команде — «сильная». Та, на кого можно положиться. Попросить помощь = слабость. Роль держалась на страхе отвержения и создавала фоновое напряжение. Плюс сама организация процессов в фирме не подразумевает хорошего состояния человека: много разнонаправленных задач и дедлайны, которые образуются, даже если выкладываешься на все 100.</p>
+        </div>
+        <div class="article-quadrant">
+          <div class="quadrant-title">Внутренний контент</div>
+          <p>За выгоранием пряталось простое: «я не знаю, чего хочу для себя. Я всегда делала то, что нужно другим».</p>
+        </div>
+        <p>Это не про тайм-менеджмент и не про саму лишь работу. Это четыре слоя, каждый из которых подпитывал остальные.</p>
+        <p class="article-callout">Выгорание — симптом. Вопрос: симптом чего?</p>
+        <p>Дальше расскажу, как мы с этим работали.</p>
+        <hr>
+        <h3>Часть 2. Как мы работали: четыре слоя изменений</h3>
+        <p>Обычно я выстраиваю работу так: мы выводим человека из активного разрушительного процесса, чтобы у него появился ресурс на более глубокую психологическую работу и шаги в изменении своей жизни.</p>
+        <p>Когда Маша пришла на первую сессию, её реальность состояла из десятков разрозненных и запутанных задач и процессов. И выделить, что нужно сделать первым, зачастую, очень трудно — можно находиться в ужасном состоянии без ресурса на процесс осознавания. Только с желанием не быть и желанием выбраться из этого.</p>
+        <p>Что мы делаем дальше? Вместе с Машей мы начинаем распутывать этот клубок.</p>
+        <h4>1. Тело</h4>
+        <p>Сначала мы выходим из активного негативного процесса. Смотрим, что будет, если:</p>
+        <ul>
+          <li>Наладить режим сна — и разобраться, что его сбивает (тревога? кофеин на ночь? бесконечный скролл?)</li>
+          <li>Сбалансировать приём пищи и найти новые пищевые привычки, которые дают энергию, а не отнимают её</li>
+          <li>Ввести или скорректировать физическую активность — прогулки, спорт, йога. В теле накапливается психическое напряжение, и без каждодневного движения оно только усугубляет состояние.</li>
+        </ul>
+        <p>Работа с телесными зажимами — это второстепенная часть, которая может понадобиться позже. Сначала стабилизируем базу, а потом уже разбираемся, почему Маша вообще туда попала.</p>
+        <h4>2. Внутренний мир</h4>
+        <p>Сначала нужно помочь Маше разобраться с напряжением, которое уже есть. Маша пришла в околодепрессивном состоянии, с повышенной тревожностью, и ей нужно выговориться, выплакать, вызлиться на то, что с ней случилось за последние годы. Есть разные техники вывода психического напряжения.</p>
+        <p>Работа с убеждениями: «Если я не сделаю всё сама — ничего не получится», «Отдых — для слабаков», «Я ценна только когда продуктивна» — это вторая часть процесса.</p>
+        <p>Эти программы часто родом из детства — и они управляют жизнью, пока остаются невидимыми. Мы можем легко логически обосновать, почему думать так, как мы думаем, — это правильно. Но мы редко даже задумываемся о том, как мы мыслим.</p>
+        <h4>3. Социальный контекст</h4>
+        <p>Смотрим на рабочую среду: можно ли перераспределить нагрузку? Делегировать? Отказаться от части задач? Учимся говорить «нет» без чувства вины. Исследуем границы — где Маша их теряет и почему.</p>
+        <h4>4. Смыслы</h4>
+        <p>Зачем вообще всё это? Ради чего Маша работает? Что для неё по-настоящему важно? Часто выгорание — это сигнал, что мы потеряли связь с тем, что имеет значение. Или пытаемся реализовать чужие цели, а не свои.</p>
+        <hr>
+        <h3>Часть 3. Почему выгорают многие: культура эффективности против человеческой природы</h3>
+        <p>Выше мы разобрали кейс Маши: как выгорание проявляется и как с ним работать через 4 квадранта (тело, социальный контекст, внутренний мир, смыслы).</p>
+        <p>Теперь хочу раскрыть больше тему социального контекста и того, как обычный человек вписывается или не вписывается в логику тенденций окружающего мира.</p>
+        <p>Почему столько людей выгорают? Почему это не единичные случаи, а массовое явление?</p>
+        <p>Рынок продаёт образ идеального человека:</p>
+        <ul>
+          <li>Рациональный, собранный</li>
+          <li>Постоянно проверяет гипотезы</li>
+          <li>Быстро обучается</li>
+          <li>Умеет держать фокус</li>
+          <li>Работает в неопределённости</li>
+          <li>Осваивает быстрее всех самые современные инструменты</li>
+        </ul>
+        <p>Есть проблема того, что современный стиль жизни маскируется под естественный порядок вещей. Сейчас философско-социальная модель такая, и мы уже не замечаем, как становимся обусловленными ею.</p>
+        <p>Даже если мы развиваемся духовно, то духовное достигаторство никто не отменял. Это как вшитая настройка, которая благополучно ложится на наши страхи: быть не как все, что-то упустить, расстроить маму, не успеть и так далее.</p>
+        <p>Тема с эффективностью не так плоха, пока не переходит в категорию невротической, то есть идея ради идеи без учёта всего остального.</p>
+        <p>А ещё рынок преподносит модель как универсальную, а быть счастливыми в ней могут лишь единицы.</p>
+        <h4>Одинаковая формула для разных людей</h4>
+        <p>Современная культура эффективности — как магазин одежды с одной вещью: она предлагает разместиться в ней принципиально разным по конфигурации людям и говорит: «Вот оно, счастье!»</p>
+        <p>Способность постоянно жить в режиме высокой когнитивной нагрузки, неопределённости и включённости — сильно варьируется. Жить в постоянном режиме адаптации без отдыха и понимания «зачем?» — выматывает.</p>
+        <p>Люди отличаются по:</p>
+        <ul>
+          <li>Типу работы нервной системы</li>
+          <li>Скорости восстановления</li>
+          <li>Устойчивости к стрессу</li>
+          <li>Способности удерживать внимание</li>
+        </ul>
+        <p>Для одних режим жизни как эффективного проекта действительно подпитывающий. Для других — глубоко разрушительный, даже если внешне всё выглядит успешно.</p>
+        <h4>Немного статистики</h4>
+        <p>Среди работающих взрослых:</p>
+        <ul>
+          <li>20–40% имеют признаки выгорания</li>
+          <li>Около 15–20% переживают депрессивные эпизоды</li>
+          <li>Около 20–25% имеют тревожные расстройства</li>
+          <li>15–20% имеют высокую сенсорную чувствительность, то есть гиперчувствительность</li>
+          <li>10–20% переживают последствия травматического опыта прошлого</li>
+        </ul>
+        <p>Если убрать пересечения: около <strong>40–60%</strong> внутри амбициозной, образованной группы имеют такие особенности нервной системы, тела и психики, которые делают длительный режим высокой интенсивности нежизнеспособным на долгой дистанции.</p>
+        <p><strong>Итого:</strong> модель продуктивности подходит для 30–50% людей. Но даже среди них устойчивый высокий статус достаётся 5–15% — тем, где личные качества совпадают с доступом к капиталу, связям, а ещё удачное время и место.</p>
+        <p>Предприниматели знают, что статистически не добьются успеха, но всё равно играют, потому что кажется, что альтернативы нет.</p>
+        <h4>Что развивает модель эффективности (и что не развивает)</h4>
+        <p><strong>Модель эффективности развивает:</strong></p>
+        <ul>
+          <li>Агентность</li>
+          <li>Контроль</li>
+          <li>Стратегическое мышление</li>
+          <li>Способность ускоряться и оптимизировать</li>
+        </ul>
+        <p><strong>Но почти не развивает (или снижает):</strong></p>
+        <ul>
+          <li>Способность выдерживать уязвимость</li>
+          <li>Неопределённость без немедленного решения</li>
+          <li>Неуспех без разрушения самооценки</li>
+          <li>Зависимость от других без ощущения утраты автономии</li>
+        </ul>
+        <p>Она прекрасно усиливает человека как функцию. Но слабо поддерживает его как субъекта вне этой функции. Ещё и человек начинает отождествлять себя с ролью и критериями эффективности.</p>
+        <p>Ты можешь быть хоть в 1% прорвавшихся. Но если твоя ценность = продуктивность, то любое замедление становится кризисом.</p>
+        <p class="article-callout">Когда продуктивность становится фундаментом самоощущения, человек строит опору на игре, правила которой он контролирует гораздо меньше, чем кажется.</p>
+        <p>Таким образом, личное внутреннее слишком размывается во внутреннем общем — и получается кризис смыслов и истощение.</p>
+        <button type="button" class="article-collapse" onclick="toggleArticle('article-1')">Свернуть ↑</button>
+      </div>
+    </article>
+
+    <article class="article-card" id="article-2">
+      <div class="article-meta">
+        <span>22 апреля 2026</span>
+        <span class="article-dot"></span>
+        <span>9 мин чтения</span>
+      </div>
+      <h2 class="article-title">7 инструментов, с которыми можно самостоятельно начать исследование</h2>
+      <p class="article-excerpt">Инструменты, с которых можно начать исследовать себя в вопросе близости и нащупать, каково это — быть в безопасном контакте.</p>
+      <button type="button" class="article-readmore" onclick="toggleArticle('article-2')">Читать полностью →</button>
+      <div class="article-full">
+
+        <p class="article-subtitle">Инструменты, с которых можно начать исследовать себя в вопросе близости и нащупать, каково это — быть в безопасном контакте.</p>
+
+        <p>В работе с искажениями в сфере близости я опираюсь на свой практический опыт, теорию привязанности Джона Боулби и протокол Дэниела Брауна и Дэвида Эллиотта — он описан в их книге «Нарушение привязанности у взрослых». Ниже — семь техник из этого протокола, адаптированных под самостоятельную работу. С некоторыми можно разобраться одному. С более глубокими — лучше в терапии.</p>
+
+        <h3>1. Визуализация безопасного пространства</h3>
+        <p><strong>Что это.</strong> Внутреннее «безопасное место», в которое можно вернуться, когда запускается тревога.</p>
+        <p><strong>Как это выглядит.</strong> Представьте место, где вам хорошо и защищённо, — реальное или воображаемое. Образ должен быть конкретным: что вокруг, какой свет, какие звуки, какие запахи, температура.</p>
+        <p><strong>Когда использовать.</strong> Партнёр не отвечает дольше минуты — и внутри начинается паника. Или он подходит обнять — а тело сжимается. В такие моменты возвращайтесь в своё безопасное пространство и настраивайтесь на его ощущение.</p>
+
+        <h3>2. Осознанность (mindfulness)</h3>
+        <p><strong>Что это.</strong> Навык замечать, что со мной прямо сейчас реально происходит — а что является эхом прошлого, наложенным на настоящее.</p>
+        <p><strong>Как это выглядит.</strong> Тренируйте внимание оставаться в текущем моменте. Замечайте, когда мозг автоматически достраивает тревожный сценарий («он не пишет — значит, я его достала»), и возвращайтесь к фактам.</p>
+        <p><strong>Зачем.</strong> Отделять реальные угрозы от тех, что мы проигрываем внутри головы. Со временем — меньше ложных сигналов тревоги, больше опоры на реальность.</p>
+
+        <h3>3. Перепроживание детских травм</h3>
+        <p><strong>Что это.</strong> Вернуться в значимый момент из детства — но уже с позиции взрослого, у которого есть голос, защита, выбор и ресурс.</p>
+        <p><strong>Как это выглядит.</strong> Представляете сцену. Рядом с собой-ребёнком встаёт вы-сегодняшний взрослый. Даёте ребёнку то, что тогда было нужно: защиту, слова, объятия, разрешение чувствовать.</p>
+        <p><strong>Зачем.</strong> Эмоциональная разрядка того, что застряло, и «перепрошивка» травмированной части с учётом нового опыта.</p>
+        <p><strong>Важно.</strong> С сильными эпизодами — только со специалистом. Самостоятельно — с более мягкими.</p>
+
+        <h3>4. Работа с внутренним ребёнком</h3>
+        <p><strong>Что это.</strong> Похоже на предыдущую технику, но без возвращения в прошлое. Работа идёт в настоящем.</p>
+        <p><strong>Как это выглядит.</strong> На образном уровне разотождествляетесь со своим внутренним ребёнком и обращаетесь к нему как взрослый — с заботой, вниманием, принятием. Слушаете, что ему нужно сейчас, и даёте это: мысленно или реально.</p>
+        <p><strong>Зачем.</strong> Формирует внутреннее ощущение безопасности, улучшает самоотношение, учит обращаться с собой бережно.</p>
+
+        <h3>5. Переопределение негативных убеждений</h3>
+        <p><strong>Что это.</strong> Техника из КПТ. Нарушения привязанности часто формируют установки вроде «я не заслуживаю любви», «людям нельзя доверять», «если открыться — бросят». Эти установки управляют жизнью, пока остаются невидимыми.</p>
+        <p><strong>Как это выглядит.</strong> 15–20 минут выписывайте всё, что приходит в голову, когда думаете о доме, семье, близости, сексе, свадьбе, рождении детей, совместной жизни. Без фильтров и оценок.</p>
+        <p><strong>Зачем.</strong> Вы удивитесь, как много из этих мыслей — устаревшее, и отпадёт само собой, как только вы их увидите. С оставшимся уже можно работать адресно.</p>
+
+        <h3>6. Письма себе-ребёнку</h3>
+        <p><strong>Что это.</strong> Вы-взрослый пишет письмо вам-ребёнку — с поддержкой, пониманием и любовью, которых тогда не хватало.</p>
+        <p><strong>Как это выглядит.</strong> Пишите от руки. Не редактируйте. Можно писать несколько писем — в разные возрасты и в разные эпизоды.</p>
+        <p><strong>Зачем.</strong> Строит эмоциональный мост между детским опытом и взрослой способностью заботиться о себе.</p>
+
+        <h3>7. Новые модели отношений</h3>
+        <p><strong>Что это.</strong> В терапии это происходит через контакт с терапевтом, который становится «безопасной базой». Самостоятельно можно сделать первый шаг — через визуализацию.</p>
+        <p><strong>Как это выглядит.</strong> Представьте идеальных родителей — таких, которые могли бы дать вам то, чего не давали настоящие. Если речь о безусловной любви, это могут быть архетипические «идеальные» родители, не обязательно реальные люди. Побудьте в их пространстве. Дайте себе почувствовать, каково это — быть любимым просто за то, что ты есть.</p>
+        <p><strong>Зачем.</strong> Образец здорового контакта, от которого можно отталкиваться в реальных отношениях.</p>
+
+        <hr>
+
+        <p class="article-callout">Эти техники — точка входа, а не терапия сама по себе. С ними можно сделать многое. Но если наталкиваетесь на что-то, что не сдвигается или становится только больнее — это не провал. Это знак, что рядом нужен специалист.</p>
+
+        <button type="button" class="article-collapse" onclick="toggleArticle('article-2')">Свернуть ↑</button>
+      </div>
+    </article>
+
+    <article class="article-card" id="article-3">
+      <div class="article-meta">
+        <span>22 апреля 2026</span>
+        <span class="article-dot"></span>
+        <span>8 мин чтения</span>
+      </div>
+      <h2 class="article-title">Экономика собственных ресурсов: как не сливать энергию впустую</h2>
+      <p class="article-excerpt">Один из самых частых запросов в моей практике — «у меня не остаётся ресурса на себя и свои увлечения». Разбираю, как я с этим работаю и что можно попробовать сделать самому.</p>
+      <button type="button" class="article-readmore" onclick="toggleArticle('article-3')">Читать полностью →</button>
+      <div class="article-full">
+
+        <h3>Что такое ресурс и куда он уходит</h3>
+        <p>Ресурс — это объём энергии, физической или психической, которого в человеке есть условно определённое количество. Эта энергия тратится на:</p>
+        <ul>
+          <li>поддержание базовых потребностей</li>
+          <li>эмоции и реакции на происходящее — своё и чужое</li>
+          <li>интеллектуальную деятельность и работу</li>
+          <li>фокус внимания: соцсети, контент, тревожные мысли, навязчивые желания</li>
+          <li>восстановление после болезни или тяжёлых событий</li>
+        </ul>
+        <p>Пока расход балансируется приходом — жить можно. Когда нет — начинается истощение.</p>
+
+        <h3>Считаем экономику: пример Маши</h3>
+        <p>Допустим, у Маши есть потенциал в 50 условных единиц ресурса. Считаем, куда они уходят.</p>
+        <p><strong>Работа.</strong> Какая она — любимая или нет? Режим изматывающий или нормальный? Какие задачи, какие отношения в коллективе? Как Маша к этому всему относится? Допустим, на работу уходит 30 единиц.</p>
+        <p><strong>Быт, отношения, друзья, семья, хобби, спорт</strong> — плюс все сопровождающие жизнь вопросы. Ещё 30 единиц.</p>
+        <p class="article-callout">Итого: 50 − 30 − 30 = минус 10. Маша уже в долг.</p>
+        <p>Чтобы не уходить в минус, нужно восполнять: хорошие эмоции, отдых, качественная обратная связь, признание труда и результатов, ощущение движения. По идее — 60 единиц в плюс, чтобы баланс держался.</p>
+        <p>Арифметика простая. Реализация — сложнее, чем кажется.</p>
+
+        <h3>Что забирает слишком много</h3>
+        <p>Всё работает более-менее гармонично, пока не появляются «чёрные дыры», которые высасывают энергию быстрее, чем она успевает восполняться. Типовые:</p>
+        <ul>
+          <li>токсичные отношения</li>
+          <li>неадекватное отношение к себе и к окружающему</li>
+          <li>низкая чувствительность к себе</li>
+          <li>плохое питание</li>
+          <li>плохой сон</li>
+          <li>отсутствие физической активности</li>
+          <li>отсутствие цели или направления движения</li>
+        </ul>
+        <p>Когда в жизни есть хотя бы две-три таких дыры, никакое «отдохни на выходных» не помогает. Минус накапливается быстрее, чем плюс.</p>
+
+        <h3>Как я работаю с этим в терапии</h3>
+        <p>Когда человек приходит с запросом «нет сил», мы вместе проходим по всем пунктам. Что-то меняем, что-то убираем, что-то добавляем в обыденную жизнь.</p>
+        <p>Моя задача — не дать вам мотивации, а помочь увидеть, куда на самом деле уходит ваш ресурс, и навести порядок в мыслях и эмоциях. Именно этот порядок определяет, как вы чувствуете себя, как реагируете на события и как строите отношения с собой.</p>
+
+        <h3>Стать экономистом для самого себя</h3>
+        <p>Главная задача — научиться быть грамотным экономистом по отношению к самому себе. Для этого нужно знать:</p>
+        <ul>
+          <li>сколько ресурса у меня доступно</li>
+          <li>сколько уходит и куда</li>
+          <li>сколько заблокировано</li>
+          <li>что я могу сделать, чтобы приходило больше</li>
+        </ul>
+        <p>Копать глубоко для начала не нужно. Достаточно посидеть и честно посмотреть. Очень часто обнаруживается, что, например, чувство вины и неравномерное распределение домашних обязанностей с партнёром съедают половину бюджета — а на восстановление не остаётся ничего.</p>
+
+        <h3>Потенциал можно расширить</h3>
+        <p>И ещё важное: запас ресурсов — не фиксированная величина. То, что доступно в обычной жизни, — это только часть потенциала. Остальное заблокировано: в старых установках, непрожитых эмоциях, привычках компенсации.</p>
+        <p>Если разблокировать — энергии становится не 50 условных единиц, а 100. И экономика настраивается несравнимо проще.</p>
+
+        <hr>
+
+        <h3>Если узнали себя</h3>
+        <p>Сделать первый проход по собственной экономике ресурсов можно самостоятельно. Но когда хочется не просто посчитать, а разобраться с корнями — полезнее в паре с терапевтом. Начать можно с диагностической сессии — за одну встречу станет понятно, где у вас основные утечки и что с ними делать.</p>
+        <button type="button" class="article-cta" onclick="openBookingModal()">Записаться</button>
+
+        <button type="button" class="article-collapse" onclick="toggleArticle('article-3')" style="display:block;">Свернуть ↑</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section fade-up" id="contact">
+  <div class="contact-top">
+    <div class="contact-box">
+      <h2 class="contact-title">Готовы сделать первый шаг, но не знаете с чего начать?</h2>
+      <p>Начни с интегральной диагностики — за одну встречу поймёшь, что происходит, и получишь карту с конкретным планом что делать дальше.</p>
+      <a href="https://t.me/alina_henry" class="btn-white" target="_blank">Написать Алине</a>
+    </div>
+  </div>
+  <div class="contact-links">
+    <a href="https://t.me/alina_henry" class="c-link" target="_blank">
+      <span class="c-link-ico">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      </span>
+      Телеграм — @alina_henry
+    </a>
+    <a href="https://wa.me/79500227561" class="c-link" target="_blank">
+      <span class="c-link-ico">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
+      </span>
+      WhatsApp — +7 950 022-75-61
+    </a>
+    <a href="mailto:henrikovna90@gmail.com" class="c-link">
+      <span class="c-link-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </span>
+      henrikovna90@gmail.com
+    </a>
+    <a href="https://t.me/metapodbey_portal" class="c-link" target="_blank">
+      <span class="c-link-ico">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      </span>
+      Мой Телеграм-канал — @metapodbey_portal
+    </a>
+  </div>
+</section>
+
+<!-- BOOKING MODAL -->
+<div class="booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="bookingTitle">
+  <div class="booking-overlay" onclick="closeBookingModal()"></div>
+  <div class="booking-dialog">
+    <button type="button" class="booking-close" onclick="closeBookingModal()" aria-label="Закрыть">×</button>
+    <h3 class="booking-title" id="bookingTitle">Запись на сессию</h3>
+    <p class="booking-sub">Заполни форму — я получу заявку в Телеграме и свяжусь с тобой в ближайшее время, чтобы договориться о встрече.</p>
+
+    <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+      <label class="booking-label">
+        <span>Как тебя зовут</span>
+        <input type="text" name="name" required autocomplete="given-name" placeholder="Имя">
+      </label>
+
+      <label class="booking-label">
+        <span>С чем хочешь разобраться</span>
+        <textarea name="request" rows="4" required placeholder="Несколько слов о том, что происходит"></textarea>
+      </label>
+
+      <label class="booking-label">
+        <span>Когда удобно встретиться</span>
+        <textarea name="schedule" rows="2" placeholder="Например: будни после 19:00 (Мск), или выходные"></textarea>
+      </label>
+
+
+      <button type="submit" class="btn-primary booking-submit">Отправить заявку</button>
+    </form>
+
+    <div class="booking-success">
+      <div class="booking-success-icon">✓</div>
+      <h3>Заявка готова</h3>
+      <p>Открываю Телеграм — остаётся нажать «Отправить».<br>Я отвечу в ближайшее время.</p>
+      <a href="#" onclick="closeBookingModal(); return false;">Закрыть</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Алина Генри</span>
+  <span>Интегральный психотерапевт · Онлайн</span>
+  <a href="mailto:henrikovna90@gmail.com">henrikovna90@gmail.com</a>
+</footer>
+
+<script>
+/* ── ALWAYS OPEN AT TOP ── */
+window.addEventListener('beforeunload', () => { window.scrollTo(0, 0); });
+document.addEventListener('DOMContentLoaded', () => {
+  window.scrollTo(0, 0);
+  // If URL contains a hash, clear it so refresh opens at top
+  if (location.hash && history.replaceState) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+});
+window.addEventListener('load', () => { window.scrollTo(0, 0); });
+window.addEventListener('pageshow', () => { window.scrollTo(0, 0); });
+
+/* ── SMOOTH NAV SCROLL (no URL hash) ── */
+function toggleArticle(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+  card.classList.toggle('open');
+  if (card.classList.contains('open')) {
+    card.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+}
+
+function navScroll(e, id) {
+  if (e && e.preventDefault) e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (typeof closeMenu === 'function') closeMenu();
+  return false;
+}
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* ── NAV SCROLL STATE ── */
+(function() {
+  const navEl = document.querySelector('nav');
+  if (!navEl) return;
+  const threshold = 120;
+  function update() {
+    if (window.scrollY > threshold) navEl.classList.add('scrolled');
+    else navEl.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+/* ── BOOKING MODAL ── */
+// NOTE: Пока бот не сделан, заявка открывает чат @alina_henry с готовым текстом.
+// Когда будет бот + Google Calendar → заменить тело handleBookingSubmit
+// на fetch('/api/booking', { method: 'POST', body: JSON.stringify(data) })
+// и поднять маленький backend (Cloudflare Workers / Vercel) с вызовом Telegram Bot API.
+
+/* ── REQUESTS CAROUSEL ── */
+let reqCarouselReady = false;
+function initReqCarousel() {
+  const grid = document.getElementById('reqGrid');
+  if (!grid) return;
+  if (window.innerWidth > 960) return; // only mobile
+  if (reqCarouselReady) return;
+  const originals = Array.from(grid.querySelectorAll('.req-card'));
+  if (!originals.length) return;
+  // Clone last card and prepend
+  const lastClone = originals[originals.length - 1].cloneNode(true);
+  lastClone.dataset.clone = 'last';
+  grid.insertBefore(lastClone, grid.firstChild);
+  // Clone first card and append
+  const firstClone = originals[0].cloneNode(true);
+  firstClone.dataset.clone = 'first';
+  grid.appendChild(firstClone);
+  // Position at first real card (idx 1)
+  requestAnimationFrame(() => {
+    const step = originals[0].offsetWidth;
+    grid.scrollLeft = step;
+    reqCarouselReady = true;
+  });
+}
+window.addEventListener('load', initReqCarousel);
+
+let reqScrolling = false;
+function reqScroll(dir) {
+  const grid = document.getElementById('reqGrid');
+  if (!grid) return;
+  if (reqScrolling) return;
+  const all = grid.querySelectorAll('.req-card');
+  if (!all.length) return;
+  const step = all[0].offsetWidth;
+  const total = all.length;
+  const current = Math.round(grid.scrollLeft / step);
+  const next = current + dir;
+  reqScrolling = true;
+  grid.scrollTo({ left: next * step, behavior: 'smooth' });
+  setTimeout(() => {
+    const landed = Math.round(grid.scrollLeft / step);
+    // If we landed on a clone, silently jump to the real equivalent
+    if (landed <= 0) {
+      grid.scrollTo({ left: (total - 2) * step, behavior: 'instant' });
+    } else if (landed >= total - 1) {
+      grid.scrollTo({ left: step, behavior: 'instant' });
+    }
+    reqScrolling = false;
+  }, 450);
+}
+
+/* ── REVIEWS CAROUSEL ── */
+function reviewsScroll(dir) {
+  const grid = document.getElementById('reviewsGrid');
+  if (!grid) return;
+  const card = grid.querySelector('.review-card');
+  if (!card) return;
+  const gap = parseFloat(getComputedStyle(grid).columnGap || '0') || 0;
+  const step = card.offsetWidth + gap;
+  grid.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
+
+/* ── APPROACH INTRO ── */
+function toggleApproachIntro() {
+  const el = document.getElementById('approachIntro');
+  el.classList.toggle('open');
+  const toggle = el.querySelector('.approach-intro-toggle');
+  if (toggle) {
+    toggle.textContent = el.classList.contains('open') ? 'Свернуть' : 'Читать подробнее';
+  }
+}
+
+/* ── FAQ ── */
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  // Open clicked if it was closed
+  if (!wasOpen) item.classList.add('open');
+}
+
+/* ── MOBILE MENU ── */
+function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  const burger = document.querySelector('.nav-burger');
+  nav.classList.toggle('open');
+  burger.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  const nav = document.getElementById('navLinks');
+  const burger = document.querySelector('.nav-burger');
+  nav.classList.remove('open');
+  burger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+const TELEGRAM_USERNAME = 'alina_henry';
+
+function openBookingModal() {
+  const m = document.getElementById('bookingModal');
+  m.classList.add('open');
+  m.classList.remove('success');
+  m.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => {
+    const first = m.querySelector('input[name="name"]');
+    if (first) first.focus();
+  }, 120);
+}
+
+function closeBookingModal() {
+  const m = document.getElementById('bookingModal');
+  m.classList.remove('open');
+  m.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    m.classList.remove('success');
+    const form = m.querySelector('.booking-form');
+    if (form) form.reset();
+  }, 300);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const m = document.getElementById('bookingModal');
+    if (m.classList.contains('open')) closeBookingModal();
+  }
+});
+
+function handleBookingSubmit(e) {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const name = (fd.get('name') || '').trim();
+  const request = (fd.get('request') || '').trim();
+  const schedule = (fd.get('schedule') || '').trim();
+  const contact = (fd.get('contact') || '').trim();
+
+  const lines = [
+    'Заявка на сессию (с сайта)',
+    '',
+    'Имя: ' + name,
+    'Запрос: ' + request,
+  ];
+  if (schedule) lines.push('Удобное время: ' + schedule);
+  if (contact) lines.push('Контакт: ' + contact);
+
+  const message = lines.join('\n');
+
+  // Open Telegram chat with pre-filled message (works in both web and mobile clients)
+  const url = 'https://t.me/' + TELEGRAM_USERNAME + '?text=' + encodeURIComponent(message);
+
+  // Also copy to clipboard as a fallback (in case ?text= is ignored by the client)
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(message).catch(() => {});
+  }
+
+  window.open(url, '_blank', 'noopener');
+
+  // Show success state
+  const m = document.getElementById('bookingModal');
+  m.classList.add('success');
+}
+</script>
+</body>
+</html>
