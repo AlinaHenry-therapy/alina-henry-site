@@ -1136,6 +1136,97 @@ nav.scrolled .nav-links li:has(.nav-cta) {
   .review-nav svg { width: 44px; height: 44px; }
 }
 
+/* ── EDUCATION ── */
+.education { background: var(--white); }
+.education .s-tag { text-align: center; }
+.edu-carousel {
+  position: relative;
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 60px;
+}
+.edu-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 8px;
+}
+.edu-grid::-webkit-scrollbar { display: none; }
+.edu-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 56px; height: 56px;
+  background: transparent; color: #FFFFFF; border: none; padding: 0;
+  font-size: 0; cursor: pointer; z-index: 3;
+  display: flex; align-items: center; justify-content: center;
+  filter:
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  transition: transform 0.2s, filter 0.2s;
+}
+.edu-nav svg { width: 48px; height: 48px; display: block; stroke: #FFFFFF; }
+.edu-nav:hover {
+  transform: translateY(-50%) scale(1.08);
+  filter:
+    drop-shadow(0 0 3px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+}
+.edu-nav-prev { left: -8px; }
+.edu-nav-next { right: -8px; }
+.edu-card {
+  margin: 0; padding: 0;
+  background: var(--white);
+  border: 1px solid var(--border-r);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(26,26,24,0.05);
+  flex: 0 0 calc((100% - 54px) / 4);
+  scroll-snap-align: start;
+  display: flex; flex-direction: column;
+}
+.edu-screenshot-wrap {
+  width: 100%;
+  background: rgba(216,195,165,0.15);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.edu-screenshot-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.edu-caption {
+  padding: 12px 14px 16px;
+  font-size: 13px;
+  color: var(--text-mid);
+  text-align: center;
+  line-height: 1.45;
+  border-top: 1px solid var(--border-r);
+  flex: 1;
+}
+.edu-caption strong {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+@media (max-width: 960px) {
+  .edu-carousel { max-width: 520px; padding: 0 44px; }
+  .edu-card { flex: 0 0 calc((100% - 18px) / 2); }
+}
+@media (max-width: 560px) {
+  .edu-carousel { padding: 0 40px; }
+  .edu-card { flex: 0 0 100%; scroll-snap-align: center; }
+  .edu-nav { width: 48px; height: 48px; }
+  .edu-nav svg { width: 40px; height: 40px; }
+}
+
 /* ── FAQ ── */
 .faq { background: var(--cream); }
 .faq-list {
@@ -1776,6 +1867,19 @@ footer a:hover { color: rgba(255,255,255,0.7); }
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+/* Mobile typography floor: body text ≥16px, secondary labels ≥14px */
+@media (max-width: 768px) {
+  p, li, strong, em, .btn-primary, .c-link, .cred, .svc-step,
+  .req-desc, .svc-desc, .ap-desc, .hero-sub-small, .article-excerpt,
+  .article-subtitle, .article-callout, .article-readmore, .article-cta,
+  .booking-label span, .faq-answer p, .article-full p,
+  .about-text p, .approach-intro p, .contact-box p { font-size: 16px !important; }
+
+  .nav-tg-item a, .badge-label, .req-cta, .svc-tag, .svc-step-n, .svc-pkg-name,
+  .svc-pkg-save, .svc-pkg-hint, .btn-svc, .svc-badge, .price-note,
+  .planet-inner span, .approach-legend-item p, .reviews-disclaimer, .reviews-disclaimer em,
+  .article-meta span, .article-collapse, .booking-submit { font-size: 14px !important; }
+}
 </style>
 </head>
 <body>
@@ -2005,7 +2109,7 @@ footer a:hover { color: rgba(255,255,255,0.7); }
     <div class="svc-item">
       <div class="svc-body">
         <p class="svc-name">Индивидуальная терапия</p>
-        <p class="svc-desc">Работаем с тем, что происходит именно с тобой — без шаблонов. Смотрю на все уровни сразу и помогаю найти, откуда это растёт.</p>
+        <p class="svc-desc">Работаем с тем, что происходит именно с тобой — без шаблонов.</p>
         <div class="svc-tags">
           <span class="svc-tag">Тревога</span>
           <span class="svc-tag">Выгорание</span>
@@ -2014,7 +2118,7 @@ footer a:hover { color: rgba(255,255,255,0.7); }
           <span class="svc-tag">Потери</span>
         </div>
         <div class="svc-steps">
-          <div class="svc-step"><span class="svc-step-n">1 →</span>Пишешь в Телеграм, обсуждаем запрос и удобное время</div>
+          <div class="svc-step"><span class="svc-step-n">1 →</span>Пиши в Телеграм, обсудим запрос и удобное для тебя время</div>
           <div class="svc-step"><span class="svc-step-n">2 →</span>Проводим встречу онлайн по видеосвязи, знакомимся и формулируем цели</div>
           <div class="svc-step"><span class="svc-step-n">3 →</span>Договариваемся о ритме встреч — обычно раз в неделю</div>
         </div>
@@ -2900,6 +3004,17 @@ function reviewsScroll(dir) {
   const grid = document.getElementById('reviewsGrid');
   if (!grid) return;
   const card = grid.querySelector('.review-card');
+  if (!card) return;
+  const gap = parseFloat(getComputedStyle(grid).columnGap || '0') || 0;
+  const step = card.offsetWidth + gap;
+  grid.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
+
+/* ── EDUCATION CAROUSEL ── */
+function eduScroll(dir) {
+  const grid = document.getElementById('eduGrid');
+  if (!grid) return;
+  const card = grid.querySelector('.edu-card');
   if (!card) return;
   const gap = parseFloat(getComputedStyle(grid).columnGap || '0') || 0;
   const step = card.offsetWidth + gap;
