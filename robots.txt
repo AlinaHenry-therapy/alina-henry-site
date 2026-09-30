@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /design-1.html
+Disallow: /us/
+
+Host: https://alina-henry.ru
+Sitemap: https://alina-henry.ru/sitemap.xml
